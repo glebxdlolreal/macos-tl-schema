@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283338)
+// (TLS1 schema blob, build 283342)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -376,7 +376,6 @@ exportedChatlistInvite#0c5181ac flags:# title:string url:string peers:Vector<Pee
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
 exportedNoPaidMessagesToken#695dd042 flags:# token:string url:string expires:flags.0?int = ExportedNoPaidMessagesToken;
-exportedNoPaidMessagesTokenLegacy#cf5105be flags:# token:string url:flags.0?string expires:flags.1?int = ExportedNoPaidMessagesToken;
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 factCheck#b89bfccf flags:# country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
 fileHash#f39b035c offset:long limit:int hash:bytes = FileHash;
