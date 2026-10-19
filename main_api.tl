@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283328)
+// (TLS1 schema blob, build 283338)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -1296,13 +1296,11 @@ sendMessageUploadDocumentAction#aa0cd9e4 progress:int = SendMessageAction;
 sendMessageUploadPhotoAction#d1d34a26 progress:int = SendMessageAction;
 sendMessageUploadRoundAction#243e1c66 progress:int = SendMessageAction;
 sendMessageUploadVideoAction#e9763aec progress:int = SendMessageAction;
-shareThemeBackdrop#fd62fbd1 backdrop_id:int = ShareTheme;
 shareThemeBackdropOption#45c1d652 backdrop_id:int name:string center_color:int edge_color:int pattern_color:int text_color:int = ShareThemeBackdropOption;
 shareThemeBackdrops#aaeadce0 hash:int backdrops:Vector<ShareThemeBackdropOption> = ShareThemeBackdrops;
 shareThemeBackdropsNotModified#7a3f6dff = ShareThemeBackdrops;
-shareThemeColor#1f48bc20 color_id:int = ShareTheme;
 shareThemeDefault#95ace84f = ShareTheme;
-shareThemeEmoji#3ab4430a emojis:Vector<Reaction> = ShareTheme;
+shareThemeEmojiBackdrop#64b334e1 flags:# backdrop_id:flags.0?int emojis:flags.1?Vector<Reaction> = ShareTheme;
 shareThemeGift#ebece66d stargift:StarGift = ShareTheme;
 shippingOption#b6213cdf id:string title:string prices:Vector<LabeledPrice> = ShippingOption;
 smsJob#e6a1eeb8 job_id:string phone_number:string text:string = SmsJob;
@@ -1712,6 +1710,7 @@ walletTransaction#952dc143 flags:# id:string amount:long fee:long date:int peer:
 walletTransactionPeerAddress#062cc1bc flags:# address:string domain:flags.0?string = WalletTransactionPeer;
 walletTransactionPeerChannel#54e70c31 flags:# channel_id:long address:string domain:flags.0?string = WalletTransactionPeer;
 walletTransactionPeerOnramp#e595186e flags:# address:string domain:flags.0?string provider_name:string = WalletTransactionPeer;
+walletTransactionPeerTelegramGift#f4729499 flags:# = WalletTransactionPeer;
 walletTransactionPeerUnsupported#728bed5a = WalletTransactionPeer;
 walletTransactionPeerUser#d4ea706d flags:# user_id:long address:string domain:flags.0?string = WalletTransactionPeer;
 walletUserAddress#fe78eecc flags:# user_id:flags.0?long address:string public_key:bytes = WalletUserAddress;
@@ -2395,7 +2394,7 @@ payments.getStarGiftAuctionState#5c9ff4d6 auction:InputStarGiftAuction version:i
 payments.getStarGiftCollections#981b91dd peer:InputPeer hash:long = payments.StarGiftCollections;
 payments.getStarGiftUpgradeAttributes#6d038b58 gift_id:long = payments.StarGiftUpgradeAttributes;
 payments.getStarGiftUpgradePreview#9c9abcb1 gift_id:long = payments.StarGiftUpgradePreview;
-payments.getStarGiftWithdrawalUrl#cb4ead0b flags:# stargift:InputSavedStarGift password:InputCheckPasswordSRP tmp_password:flags.0?bytes = payments.StarGiftWithdrawalUrl;
+payments.getStarGiftWithdrawalUrl#c8ca817b flags:# stargift:InputSavedStarGift tmp_password:bytes = payments.StarGiftWithdrawalUrl;
 payments.getStarGifts#c4563590 hash:int = payments.StarGifts;
 payments.getStarsGiftOptions#d3c96bc8 flags:# user_id:flags.0?InputUser = Vector<StarsGiftOption>;
 payments.getStarsGiveawayOptions#bd1efd3e = Vector<StarsGiveawayOption>;
@@ -2425,7 +2424,7 @@ payments.updateStarGiftCollection#4fddbee7 flags:# peer:InputPeer collection_id:
 payments.updateStarGiftPrice#edbe6ccb stargift:InputSavedStarGift resell_amount:StarsAmount = Updates;
 payments.upgradeStarGift#aed6e4f5 flags:# stargift:InputSavedStarGift = Updates;
 payments.validateRequestedInfo#b6c8f12b flags:# invoice:InputInvoice info:PaymentRequestedInfo = payments.ValidatedRequestedInfo;
-payments.withdrawStarGift#20109cb3 flags:# stargift:InputSavedStarGift password:InputCheckPasswordSRP tmp_password:flags.1?bytes = Bool;
+payments.withdrawStarGift#ec2030ae flags:# stargift:InputSavedStarGift tmp_password:bytes = Bool;
 phone.acceptCall#3bd2b4a0 peer:InputPhoneCall g_b:bytes protocol:PhoneCallProtocol = phone.PhoneCall;
 phone.checkGroupCall#b59cf977 call:InputGroupCall sources:Vector<int> = Vector<int>;
 phone.confirmCall#2efe1722 peer:InputPhoneCall g_a:bytes key_fingerprint:long protocol:PhoneCallProtocol = phone.PhoneCall;
