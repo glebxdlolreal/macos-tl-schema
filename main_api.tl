@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283365)
+// (TLS1 schema blob, build 283366)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -59,7 +59,7 @@ account.webBrowserSettingsNotModified#c31c8f4e = account.WebBrowserSettings;
 accountDaysTTL#b8d0afdf days:int = AccountDaysTTL;
 agent.agentProvider#47327c87 flags:# id:string title:string vendor:string key_url:string icon_emoji_id:flags.1?long = agent.Provider;
 agent.providerKey#784d7e10 provider:string key_last4:string date_connected:int = agent.ProviderKey;
-agent.providers#b87e29b6 providers:Vector<agent.Provider> = agent.Providers;
+agent.providers#872297f2 hash:long providers:Vector<agent.Provider> = agent.Providers;
 agent.providersNotModified#43f756ad = agent.Providers;
 agent.settings#fcc362b5 flags:# keys:Vector<agent.ProviderKey> active_provider:flags.0?string = agent.Settings;
 aiComposeTone#cff63ea9 flags:# id:long access_hash:long slug:string title:string emoji_id:flags.1?long prompt:flags.4?string installs_count:flags.2?int author_id:flags.3?long example_english:flags.5?AiComposeToneExample = AiComposeTone;
