@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283394)
+// (TLS1 schema blob, build 283395)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -577,8 +577,8 @@ inputMediaUploadedDocument#037c9330 flags:# file:InputFile thumb:flags.2?InputFi
 inputMediaUploadedPhoto#7d8375da flags:# file:InputFile stickers:flags.0?Vector<InputDocument> ttl_seconds:flags.1?int video:flags.3?InputDocument = InputMedia;
 inputMediaVenue#c13d1c11 geo_point:InputGeoPoint title:string address:string provider:string venue_id:string venue_type:string = InputMedia;
 inputMediaWebPage#c21b8849 flags:# url:string = InputMedia;
-inputMediaWidget#52d8dd85 flags:# width:int height:int html:string public_data:flags.3?bytes chat_data:flags.4?bytes = InputMedia;
-inputMediaWidgetId#7c855cb5 flags:# widget_id:long chat_data:flags.0?bytes = InputMedia;
+inputMediaWidget#44f6c04e flags:# width:int height:int html:string public_data:flags.2?string chat_data:flags.3?string = InputMedia;
+inputMediaWidgetId#7c855cb5 flags:# widget_id:long chat_data:flags.0?string = InputMedia;
 inputMessageCallbackQuery#acfa1a7e id:int query_id:long = InputMessage;
 inputMessageEntityMentionName#208e68c9 offset:int length:int user_id:InputUser = MessageEntity;
 inputMessageID#a676a322 id:int = InputMessage;
@@ -890,7 +890,7 @@ messageMediaUnsupported#9f84f49e = MessageMedia;
 messageMediaVenue#2ec0533f geo:GeoPoint title:string address:string provider:string venue_id:string venue_type:string = MessageMedia;
 messageMediaVideoStream#ca5cab89 flags:# call:InputGroupCall = MessageMedia;
 messageMediaWebPage#ddf10c3b flags:# webpage:WebPage = MessageMedia;
-messageMediaWidget#a831bf37 flags:# width:int height:int payload:bytes public_data:flags.3?bytes chat_data:flags.4?bytes widget_id:flags.5?long = MessageMedia;
+messageMediaWidget#2238f214 flags:# width:int height:int payload:bytes public_data:flags.3?string public_data_hash:flags.3?long chat_data:flags.4?string widget_id:flags.5?long = MessageMedia;
 messagePeerReaction#8c79b63c flags:# peer_id:Peer date:int reaction:Reaction = MessagePeerReaction;
 messagePeerVote#b6cc2d5c peer:Peer option:bytes date:int = MessagePeerVote;
 messagePeerVoteInputOption#74cda504 peer:Peer date:int = MessagePeerVote;
@@ -918,7 +918,7 @@ messages.botApp#eb50adf5 flags:# app:BotApp = messages.BotApp;
 messages.botCallbackAnswer#36585ea4 flags:# message:flags.0?string url:flags.2?string cache_time:int = messages.BotCallbackAnswer;
 messages.botPreparedInlineMessage#8ecf0511 id:string expire_date:int = messages.BotPreparedInlineMessage;
 messages.botResults#e021f2f6 flags:# query_id:long next_offset:flags.1?string switch_pm:flags.2?InlineBotSwitchPM switch_webview:flags.3?InlineBotWebView results:Vector<BotInlineResult> cache_time:int users:Vector<User> = messages.BotResults;
-messages.botWidgetQueryAnswer#95b73023 flags:# result:flags.0?bytes = messages.BotWidgetQueryAnswer;
+messages.botWidgetQueryAnswer#95b73023 flags:# result:flags.0?string = messages.BotWidgetQueryAnswer;
 messages.channelMessages#c776ba4e flags:# pts:int count:int offset_id_offset:flags.2?int messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
 messages.chatAdminsWithInvites#b69b72d7 admins:Vector<ChatAdminWithInvites> users:Vector<User> = messages.ChatAdminsWithInvites;
 messages.chatFull#e5d7d19c full_chat:ChatFull chats:Vector<Chat> users:Vector<User> = messages.ChatFull;
@@ -1001,7 +1001,7 @@ messages.translatedRichMessage#4203998f result:Vector<RichMessage> = messages.Tr
 messages.votesList#4899484e flags:# count:int votes:Vector<MessagePeerVote> chats:Vector<Chat> users:Vector<User> next_offset:flags.0?string = messages.VotesList;
 messages.webPage#fd5e12bd webpage:WebPage chats:Vector<Chat> users:Vector<User> = messages.WebPage;
 messages.webPagePreview#8c9a88ac media:MessageMedia chats:Vector<Chat> users:Vector<User> = messages.WebPagePreview;
-messages.widgetPublicData#04493bff hash:long data:bytes period:int = messages.WidgetPublicData;
+messages.widgetPublicData#04493bff hash:long data:string period:int = messages.WidgetPublicData;
 messages.widgetPublicDataNotModified#b9196e57 period:int = messages.WidgetPublicData;
 missingInvitee#628c9224 flags:# user_id:long = MissingInvitee;
 monoForumDialog#64407ea7 flags:# peer:Peer top_message:int read_inbox_max_id:int read_outbox_max_id:int unread_count:int unread_reactions_count:int draft:flags.1?DraftMessage = SavedDialog;
@@ -1588,7 +1588,7 @@ updateMessageID#4e90bfd6 id:int random_id:long = Update;
 updateMessagePoll#d64c522b flags:# peer:flags.1?Peer msg_id:flags.1?int top_msg_id:flags.2?int poll_id:long poll:flags.0?Poll results:PollResults = Update;
 updateMessagePollVote#7699f014 poll_id:long peer:Peer options:Vector<bytes> positions:Vector<int> qts:int = Update;
 updateMessageReactions#1e297bfa flags:# peer:Peer msg_id:int top_msg_id:flags.0?int saved_peer_id:flags.1?Peer reactions:MessageReactions = Update;
-updateMessageWidgetData#3800a794 flags:# peer:Peer msg_id:int public_data:flags.0?bytes chat_data:flags.1?bytes pts:int pts_count:int = Update;
+updateMessageWidgetData#bbb078dd flags:# peer:Peer msg_id:int public_data:flags.0?string public_data_hash:flags.0?long chat_data:flags.1?string pts:int pts_count:int = Update;
 updateMonoForumNoPaidException#9f812b08 flags:# channel_id:long saved_peer_id:Peer = Update;
 updateMoveStickerSetToTop#86fccf85 flags:# stickerset:long = Update;
 updateNewAuthorization#8951abef flags:# hash:long date:flags.0?int device:flags.0?string location:flags.0?string = Update;
@@ -2178,11 +2178,11 @@ messages.editExportedChatInvite#bdca2f75 flags:# peer:InputPeer link:string expi
 messages.editFactCheck#0589ee75 peer:InputPeer msg_id:int text:TextWithEntities = Updates;
 messages.editForumTopic#cecc1134 flags:# peer:InputPeer topic_id:int title:flags.0?string icon_emoji_id:flags.1?long closed:flags.2?Bool hidden:flags.3?Bool = Updates;
 messages.editInlineBotMessage#a423bb51 flags:# id:InputBotInlineMessageID message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> rich_message:flags.23?InputRichMessage = Bool;
-messages.editInlineBotMessageWidgetData#6396ce2b flags:# id:InputBotInlineMessageID public_data:flags.0?bytes chat_data:flags.1?bytes = Bool;
+messages.editInlineBotMessageWidgetData#6396ce2b flags:# id:InputBotInlineMessageID public_data:flags.0?string chat_data:flags.1?string = Bool;
 messages.editMessage#b106e66c flags:# peer:InputPeer id:int message:flags.11?string media:flags.14?InputMedia reply_markup:flags.2?ReplyMarkup entities:flags.3?Vector<MessageEntity> schedule_date:flags.15?int schedule_repeat_period:flags.18?int quick_reply_shortcut_id:flags.17?int rich_message:flags.23?InputRichMessage = Updates;
-messages.editMessageWidgetData#f624bc1e flags:# peer:InputPeer id:int public_data:flags.0?bytes chat_data:flags.1?bytes = Updates;
+messages.editMessageWidgetData#f624bc1e flags:# peer:InputPeer id:int public_data:flags.0?string chat_data:flags.1?string = Updates;
 messages.editQuickReplyShortcut#5c003cef shortcut_id:int shortcut:string = Bool;
-messages.editWidgetData#eac343c0 flags:# widget_id:long public_data:bytes cache_time:flags.0?int = Bool;
+messages.editWidgetData#eac343c0 flags:# widget_id:long public_data:string cache_time:flags.0?int = Bool;
 messages.exportChatInvite#a455de90 flags:# peer:InputPeer expire_date:flags.0?int usage_limit:flags.1?int title:flags.4?string subscription_pricing:flags.5?StarsSubscriptionPricing = ExportedChatInvite;
 messages.faveSticker#b9ffc55b id:InputDocument unfave:Bool = Bool;
 messages.forwardMessages#13704a7c flags:# from_peer:InputPeer id:Vector<int> random_id:Vector<long> to_peer:InputPeer top_msg_id:flags.9?int reply_to:flags.22?InputReplyTo schedule_date:flags.10?int schedule_repeat_period:flags.24?int send_as:flags.13?InputPeer quick_reply_shortcut:flags.17?InputQuickReplyShortcut effect:flags.18?long video_timestamp:flags.20?int allow_paid_stars:flags.21?long suggested_post:flags.23?SuggestedPost = Updates;
@@ -2358,7 +2358,7 @@ messages.setBotCallbackAnswer#d58f130a flags:# query_id:long message:flags.0?str
 messages.setBotGuestChatResult#b8f106e3 query_id:long result:InputBotInlineResult = InputBotInlineMessageID;
 messages.setBotPrecheckoutResults#09c2dd95 flags:# query_id:long error:flags.0?string = Bool;
 messages.setBotShippingResults#e5f672fa flags:# query_id:long error:flags.0?string shipping_options:flags.1?Vector<ShippingOption> = Bool;
-messages.setBotWidgetQueryAnswer#f8cdec6a flags:# query_id:long result:flags.0?bytes = Bool;
+messages.setBotWidgetQueryAnswer#f8cdec6a flags:# query_id:long result:flags.0?string = Bool;
 messages.setChatAvailableReactions#864b2581 flags:# peer:InputPeer available_reactions:ChatReactions reactions_limit:flags.0?int paid_enabled:flags.1?Bool = Updates;
 messages.setChatTheme#081202c9 peer:InputPeer theme:InputChatTheme = Updates;
 messages.setChatWallPaper#8ffacae1 flags:# peer:InputPeer wallpaper:flags.0?InputWallPaper settings:flags.2?WallPaperSettings id:flags.1?int = Updates;
