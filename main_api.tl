@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283396)
+// (TLS1 schema blob, build 283397)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
