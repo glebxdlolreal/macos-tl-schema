@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283392)
+// (TLS1 schema blob, build 283393)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -144,7 +144,7 @@ botInlineMessageMediaVenue#8a86659c flags:# geo:GeoPoint title:string address:st
 botInlineMessageMediaWebPage#809ad9a6 flags:# message:string entities:flags.1?Vector<MessageEntity> url:string reply_markup:flags.2?ReplyMarkup = BotInlineMessage;
 botInlineMessageRichMessage#0a617e7b flags:# reply_markup:flags.2?ReplyMarkup rich_message:RichMessage = BotInlineMessage;
 botInlineMessageText#8c7f65e2 flags:# message:string entities:flags.1?Vector<MessageEntity> reply_markup:flags.2?ReplyMarkup = BotInlineMessage;
-botInlineMessageWidget#f1851c7e flags:# width:int height:int payload:bytes public_data:flags.0?bytes chat_data:flags.1?bytes reply_markup:flags.2?ReplyMarkup widget_id:flags.3?long = BotInlineMessage;
+botInlineMessageWidget#baa17834 flags:# width:int height:int payload:bytes public_data:flags.0?string public_data_hash:flags.0?long chat_data:flags.1?string reply_markup:flags.2?ReplyMarkup widget_id:flags.3?long message:string entities:flags.4?Vector<MessageEntity> = BotInlineMessage;
 botInlineResult#11965f3a flags:# id:string type:string title:flags.1?string description:flags.2?string url:flags.3?string thumb:flags.4?WebDocument content:flags.5?WebDocument send_message:BotInlineMessage = BotInlineResult;
 botMenuButton#c7b57ce6 text:string url:string = BotMenuButton;
 botMenuButtonCommands#4258c205 = BotMenuButton;
@@ -484,8 +484,8 @@ inputBotInlineMessageMediaVenue#417bbf11 flags:# geo_point:InputGeoPoint title:s
 inputBotInlineMessageMediaWebPage#bddcc510 flags:# message:string entities:flags.1?Vector<MessageEntity> url:string reply_markup:flags.2?ReplyMarkup = InputBotInlineMessage;
 inputBotInlineMessageRichMessage#b43df56c flags:# reply_markup:flags.2?ReplyMarkup rich_message:InputRichMessage = InputBotInlineMessage;
 inputBotInlineMessageText#3dcd7a87 flags:# message:string entities:flags.1?Vector<MessageEntity> reply_markup:flags.2?ReplyMarkup = InputBotInlineMessage;
-inputBotInlineMessageWidget#c32aafcc flags:# width:int height:int html:string public_data:flags.3?bytes chat_data:flags.4?bytes reply_markup:flags.5?ReplyMarkup = InputBotInlineMessage;
-inputBotInlineMessageWidgetId#2faae1fd flags:# widget_id:long chat_data:flags.0?bytes reply_markup:flags.1?ReplyMarkup = InputBotInlineMessage;
+inputBotInlineMessageWidget#f597a3f0 flags:# width:int height:int html:string public_data:flags.2?string chat_data:flags.3?string reply_markup:flags.4?ReplyMarkup message:string entities:flags.5?Vector<MessageEntity> = InputBotInlineMessage;
+inputBotInlineMessageWidgetId#fe8b792b flags:# widget_id:long chat_data:flags.0?string reply_markup:flags.1?ReplyMarkup message:string entities:flags.2?Vector<MessageEntity> = InputBotInlineMessage;
 inputBotInlineResult#88bf9319 flags:# id:string type:string title:flags.1?string description:flags.2?string url:flags.3?string thumb:flags.4?InputWebDocument content:flags.5?InputWebDocument send_message:InputBotInlineMessage = InputBotInlineResult;
 inputBotInlineResultDocument#fff8fdc4 flags:# id:string type:string title:flags.1?string description:flags.2?string document:InputDocument send_message:InputBotInlineMessage = InputBotInlineResult;
 inputBotInlineResultGame#4fa417f2 id:string short_name:string send_message:InputBotInlineMessage = InputBotInlineResult;
