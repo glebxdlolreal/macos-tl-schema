@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283415)
+// (TLS1 schema blob, build 283417)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -1561,6 +1561,7 @@ updateDialogUnreadMark#b658f23e flags:# peer:DialogPeer saved_peer_id:flags.1?Pe
 updateDraftMessage#edfc111e flags:# peer:Peer top_msg_id:flags.0?int saved_peer_id:flags.1?Peer draft:DraftMessage = Update;
 updateEditChannelMessage#1b3f4df7 message:Message pts:int pts_count:int = Update;
 updateEditEphemeralMessage#4bbb8f01 message:EphemeralMessage = Update;
+updateEditForumTopic#2366665c flags:# peer:Peer topic_id:int title:flags.0?string icon_emoji_id:flags.1?long closed:flags.2?Bool hidden:flags.3?Bool = Update;
 updateEditMessage#e40370a3 message:Message pts:int pts_count:int = Update;
 updateEmojiGameInfo#fb9c547a info:messages.EmojiGameInfo = Update;
 updateEncryptedChatTyping#1710f156 chat_id:int = Update;
