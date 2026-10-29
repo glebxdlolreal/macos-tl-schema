@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283408)
+// (TLS1 schema blob, build 283411)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -1662,6 +1662,7 @@ updateStory#75b3b798 peer:Peer story:StoryItem = Update;
 updateStoryID#1bf335b9 id:int random_id:long = Update;
 updateTheme#8216fba3 theme:Theme = Update;
 updateTranscribedAudio#0084cd5a flags:# peer:Peer msg_id:int transcription_id:long text:string = Update;
+updateTranscribedAudioFile#734c2e7b flags:# transcription_id:long text:string = Update;
 updateUser#20529438 user_id:long = Update;
 updateUserEmojiStatus#28373599 user_id:long emoji_status:EmojiStatus = Update;
 updateUserName#a7848924 user_id:long first_name:string last_name:string usernames:Vector<Username> = Update;
@@ -2279,6 +2280,7 @@ messages.getStickerSet#c8a0ec74 stickerset:InputStickerSet hash:int = messages.S
 messages.getStickers#d5a5d3a1 emoticon:string hash:long = messages.Stickers;
 messages.getSuggestedDialogFilters#a29cd42c = Vector<DialogFilterSuggested>;
 messages.getTopReactions#bb8125ba limit:int hash:long = messages.Reactions;
+messages.getTranscriptionLangs#ba6cd9aa flags:# peer:flags.0?InputPeer = Vector<string>;
 messages.getUnreadMentions#f107e790 flags:# peer:InputPeer top_msg_id:flags.0?int offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
 messages.getUnreadPollVotes#43286cf2 flags:# peer:InputPeer top_msg_id:flags.0?int offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
 messages.getUnreadReactions#bd7f90ac flags:# peer:InputPeer top_msg_id:flags.0?int saved_peer_id:flags.1?InputPeer offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
@@ -2385,6 +2387,7 @@ messages.toggleStickerSets#b5052fea flags:# stickersets:Vector<InputStickerSet> 
 messages.toggleSuggestedPostApproval#8107455c flags:# peer:InputPeer msg_id:int schedule_date:flags.0?int reject_comment:flags.2?string = Updates;
 messages.toggleTodoCompleted#d3e03124 peer:InputPeer msg_id:int completed:Vector<int> incompleted:Vector<int> = Updates;
 messages.transcribeAudio#269e9a49 peer:InputPeer msg_id:int = messages.TranscribedAudio;
+messages.transcribeAudioFile#072d2ef7 file:InputFile = messages.TranscribedAudio;
 messages.translateRichMessage#1a542004 flags:# peer:flags.0?InputPeer id:flags.0?Vector<int> text:flags.1?Vector<InputRichMessage> to_lang:string tone:flags.2?string = messages.TranslatedRichMessage;
 messages.translateText#a5eec345 flags:# peer:flags.0?InputPeer id:flags.0?Vector<int> text:flags.1?Vector<TextWithEntities> to_lang:string tone:flags.2?string = messages.TranslatedText;
 messages.uninstallStickerSet#f96e55de stickerset:InputStickerSet = Bool;
