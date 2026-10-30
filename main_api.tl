@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283417)
+// (TLS1 schema blob, build 283418)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -1894,11 +1894,6 @@ account.uploadTheme#1c3db333 flags:# file:InputFile thumb:flags.0?InputFile file
 account.uploadWallPaper#e39a8f03 flags:# file:InputFile mime_type:string settings:WallPaperSettings = WallPaper;
 account.verifyEmail#032da4cf purpose:EmailVerifyPurpose verification:EmailVerification = account.EmailVerified;
 account.verifyPhone#4dd3a7f6 phone_number:string phone_code_hash:string phone_code:string = Bool;
-agent.connect#ff2471ec provider:string key:string = agent.Settings;
-agent.disconnect#9abcf719 provider:string = agent.Settings;
-agent.getProviders#ce0e7413 hash:long = agent.Providers;
-agent.getSettings#fb0f9757 = agent.Settings;
-agent.setActiveProvider#bcb25188 provider:string = agent.Settings;
 aicompose.createTone#4aa83913 flags:# emoji_id:long title:string prompt:string = AiComposeTone;
 aicompose.deleteTone#dd39316a tone:InputAiComposeTone = Bool;
 aicompose.getTone#b2e8ba03 tone:InputAiComposeTone = aicompose.Tones;
@@ -1987,7 +1982,6 @@ channels.deleteMessages#84c1fd4e channel:InputChannel id:Vector<int> = messages.
 channels.deleteParticipantHistory#367544db channel:InputChannel participant:InputPeer = messages.AffectedHistory;
 channels.editAdmin#9a98ad68 flags:# channel:InputChannel user_id:InputUser admin_rights:ChatAdminRights rank:flags.0?string = Updates;
 channels.editBanned#96e6cd81 channel:InputChannel participant:InputPeer banned_rights:ChatBannedRights = Updates;
-channels.editChannelNews#d704f985 channel:InputChannel news:Bool = Updates;
 channels.editLocation#58e63f6d channel:InputChannel geo_point:InputGeoPoint address:string = Bool;
 channels.editPhoto#f12e57c9 channel:InputChannel photo:InputChatPhoto = Updates;
 channels.editTitle#566decd0 channel:InputChannel title:string = Updates;
@@ -2006,7 +2000,7 @@ channels.getParticipant#a0ab6cc6 channel:InputChannel participant:InputPeer = ch
 channels.getParticipants#77ced9d0 channel:InputChannel filter:ChannelParticipantsFilter offset:int limit:int hash:long = channels.ChannelParticipants;
 channels.getSendAs#e785a43f flags:# peer:InputPeer = channels.SendAsPeers;
 channels.inviteToChannel#c9e33d54 channel:InputChannel users:Vector<InputUser> = messages.InvitedUsers;
-channels.joinChannel#416cb50c flags:# channel:InputChannel = messages.ChatInviteJoinResult;
+channels.joinChannel#7f6a1e22 channel:InputChannel = messages.ChatInviteJoinResult;
 channels.leaveChannel#f836aa95 channel:InputChannel = Updates;
 channels.readHistory#cc104937 channel:InputChannel max_id:int = Bool;
 channels.readMessageContents#eab5dc38 channel:InputChannel id:Vector<int> = Bool;
@@ -2093,13 +2087,6 @@ ephemeral.getCallbackAnswer#3fa464c8 flags:# peer:InputPeer id:int data:flags.1?
 ephemeral.getWelcomeMessages#db9ac18d peer:InputPeer hash:long = ephemeral.WelcomeMessages;
 ephemeral.reportMessage#8704f2bf peer:InputPeer id:int option:bytes message:string = ReportResult;
 ephemeral.sendMessage#ba8d5f35 flags:# peer:flags.8?InputPeer receiver_id:InputUser query_id:flags.0?long message:string entities:flags.1?Vector<MessageEntity> media:flags.2?InputMedia reply_markup:flags.3?ReplyMarkup rich_message:flags.4?InputRichMessage random_id:long reply_to:flags.5?InputReplyTo = Updates;
-feed.dislikePost#4d70175c peer:InputPeer msg_id:int = Bool;
-feed.getFeed#7e76d7d3 flags:# filter_id:int offset_position:flags.0?FeedPosition add_offset:int limit:int max_position:flags.1?FeedPosition min_position:flags.2?FeedPosition hash:long = feed.FeedMessages;
-feed.getForYou#33b8e5eb flags:# query:flags.0?string limit:int = feed.ForYouFeed;
-feed.getInterestCategories#ba7a1dba hash:long = feed.InterestCategories;
-feed.likePost#1b4b627e peer:InputPeer msg_id:int = Bool;
-feed.readFeed#b436c1ff filter_id:int max_position:FeedPosition = Updates;
-feed.setInterestCategories#9f2958dc category_ids:Vector<int> = Bool;
 folders.editPeerFolders#6847d0ab folder_peers:Vector<InputFolderPeer> = Updates;
 fragment.getCollectibleInfo#be1e85ba collectible:InputCollectible = fragment.CollectibleInfo;
 help.acceptTermsOfService#ee72f79a id:DataJSON = Bool;
