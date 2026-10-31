@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283419)
+// (TLS1 schema blob, build 283423)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -1521,8 +1521,8 @@ updateBotStarsSubscription#6c0d8e23 flags:# user_id:long payload:bytes qts:int =
 updateBotStopped#c4870a49 user_id:long date:int stopped:Bool qts:int = Update;
 updateBotWebhookJSON#8317c0c3 data:DataJSON = Update;
 updateBotWebhookJSONQuery#9b9240a6 query_id:long data:DataJSON timeout:int = Update;
-updateBotWidgetCopyQuery#b3323f58 flags:# query_id:long user_id:long data:bytes widget_id:long = Update;
-updateBotWidgetQuery#26816906 flags:# query_id:long user_id:long peer:Peer msg_id:int chat_instance:long chat_type:string data:bytes widget_id:flags.0?long = Update;
+updateBotWidgetCopyQuery#fa89bef7 flags:# query_id:long query_type:WidgetQueryType user_id:long data:bytes widget_id:long wallet_card:flags.1?wallet.Card = Update;
+updateBotWidgetQuery#b373fe68 flags:# query_id:long query_type:WidgetQueryType user_id:long peer:Peer msg_id:int chat_instance:long chat_type:string data:bytes widget_id:flags.0?long wallet_card:flags.1?wallet.Card = Update;
 updateBusinessBotCallbackQuery#1ea2fda7 flags:# query_id:long user_id:long connection_id:string message:Message reply_to_message:flags.2?Message chat_instance:long data:flags.0?bytes = Update;
 updateChannel#635b4c09 channel_id:long = Update;
 updateChannelAvailableMessages#b23fc698 channel_id:long available_min_id:int = Update;
@@ -1578,7 +1578,7 @@ updateGroupCallEncryptedMessage#c957a766 call:InputGroupCall from_id:Peer encryp
 updateGroupCallMessage#d8326f0d call:InputGroupCall message:GroupCallMessage = Update;
 updateGroupCallParticipants#f2ebdb4e call:InputGroupCall participants:Vector<GroupCallParticipant> version:int = Update;
 updateInlineBotCallbackQuery#691e9052 flags:# query_id:long user_id:long msg_id:InputBotInlineMessageID chat_instance:long data:flags.0?bytes game_short_name:flags.1?string = Update;
-updateInlineBotWidgetQuery#ab6fb64b flags:# query_id:long user_id:long inline_message_id:InputBotInlineMessageID chat_instance:long chat_type:string data:bytes widget_id:flags.0?long = Update;
+updateInlineBotWidgetQuery#a5f07e08 flags:# query_id:long query_type:WidgetQueryType user_id:long inline_message_id:InputBotInlineMessageID chat_instance:long chat_type:string data:bytes widget_id:flags.0?long wallet_card:flags.1?wallet.Card = Update;
 updateJoinChatWebViewDecision#bdac7e70 peer:Peer query_id:long result:JoinChatBotResult = Update;
 updateLangPack#56022f4d difference:LangPackDifference = Update;
 updateLangPackTooLong#46560264 lang_code:string = Update;
@@ -1708,6 +1708,7 @@ userStatusLastWeek#541a1d1a flags:# = UserStatus;
 userStatusOffline#008c703f was_online:int = UserStatus;
 userStatusOnline#edb93949 expires:int = UserStatus;
 userStatusRecently#7b197dc8 flags:# = UserStatus;
+userWallet#454d2737 flags:# address:string balance:long public_key:flags.0?bytes state_init:flags.0?bytes = UserWallet;
 username#b4073647 flags:# username:string = Username;
 users.savedMusic#34a2f297 count:int documents:Vector<Document> = users.SavedMusic;
 users.savedMusicNotModified#e3878aa4 count:int = users.SavedMusic;
@@ -1763,6 +1764,9 @@ webPageNotModified#7311ca11 flags:# cached_page_views:flags.0?int = WebPage;
 webPagePending#b0d13e47 flags:# id:long url:flags.0?string date:int = WebPage;
 webViewMessageSent#0c94511c flags:# msg_id:flags.0?InputBotInlineMessageID = WebViewMessageSent;
 webViewResultUrl#4d22ff98 flags:# query_id:flags.0?long url:string = WebViewResult;
+widgetQueryTypeData#16d8cf0b flags:# = WidgetQueryType;
+widgetQueryTypeSentTransaction#ff3b33b4 wallet:UserWallet msg_hash:string = WidgetQueryType;
+widgetQueryTypeSignData#192047dc wallet:UserWallet sign_data:DataJSON = WidgetQueryType;
 
 ---functions---
 
@@ -2186,7 +2190,7 @@ messages.getAvailableEffects#dea20a39 hash:int = messages.AvailableEffects;
 messages.getAvailableReactions#18dea0ac hash:int = messages.AvailableReactions;
 messages.getBotApp#34fdc5c3 app:InputBotApp hash:long = messages.BotApp;
 messages.getBotCallbackAnswer#9342ca07 flags:# peer:InputPeer msg_id:int data:flags.0?bytes password:flags.2?InputCheckPasswordSRP = messages.BotCallbackAnswer;
-messages.getBotWidgetQueryAnswer#d78dba1a peer:InputPeer msg_id:int data:bytes = messages.BotWidgetQueryAnswer;
+messages.getBotWidgetQueryAnswer#5c550579 peer:InputPeer msg_id:int query_type:WidgetQueryType data:bytes = messages.BotWidgetQueryAnswer;
 messages.getChatInviteImporters#df04dd4e flags:# peer:InputPeer link:flags.1?string q:flags.2?string offset_date:int offset_user:InputUser limit:int = messages.ChatInviteImporters;
 messages.getChats#49e9528f id:Vector<long> = messages.Chats;
 messages.getCommonChats#e40ca104 user_id:InputUser max_id:long limit:int = messages.Chats;
