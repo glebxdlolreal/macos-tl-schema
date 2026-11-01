@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283426)
+// (TLS1 schema blob, build 283427)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -2020,7 +2020,7 @@ channels.setMainProfileTab#3583fcb1 channel:InputChannel tab:ProfileTab = Bool;
 channels.setStickers#ea8ca4f9 channel:InputChannel stickerset:InputStickerSet = Bool;
 channels.toggleAntiSpam#68f3e4eb channel:InputChannel enabled:Bool = Updates;
 channels.toggleAutotranslation#167fc0a1 channel:InputChannel enabled:Bool = Updates;
-channels.toggleForum#3ff75734 channel:InputChannel enabled:Bool tabs:Bool = Updates;
+channels.toggleForum#a2952b54 channel:InputChannel enabled:Bool tabs:Bool sidebar:Bool = Updates;
 channels.toggleJoinRequest#0ecc2618 flags:# channel:InputChannel enabled:Bool guard_bot:flags.0?InputUser = Updates;
 channels.toggleJoinToSend#e4cb9580 channel:InputChannel enabled:Bool = Updates;
 channels.toggleParticipantsHidden#6a6e7854 channel:InputChannel enabled:Bool = Updates;
