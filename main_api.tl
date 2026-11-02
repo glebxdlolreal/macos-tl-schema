@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283431)
+// (TLS1 schema blob, build 283432)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -382,18 +382,8 @@ exportedChatlistInvite#0c5181ac flags:# title:string url:string peers:Vector<Pee
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
 exportedNoPaidMessagesToken#695dd042 flags:# token:string url:string expires:flags.0?int = ExportedNoPaidMessagesToken;
-exportedNoPaidMessagesTokenLegacy#cf5105be flags:# token:string url:flags.0?string expires:flags.1?int = ExportedNoPaidMessagesToken;
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 factCheck#b89bfccf flags:# country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
-feed.feedMessages#dcf754b9 flags:# max_position:flags.0?FeedPosition min_position:flags.1?FeedPosition read_max_position:flags.2?FeedPosition messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = feed.FeedMessages;
-feed.feedMessagesNotModified#db1a3503 = feed.FeedMessages;
-feed.forYouFeed#52577805 flags:# items:Vector<FeedItem> chats:Vector<Chat> users:Vector<User> = feed.ForYouFeed;
-feed.interestCategories#ecb62fa0 categories:Vector<feed.InterestCategory> selected:Vector<int> = feed.InterestCategories;
-feed.interestCategoriesNotModified#79cf2195 = feed.InterestCategories;
-feed.interestCategory#6c4666e3 flags:# id:int title:string emoji:flags.0?string emoji_document_id:flags.1?long = feed.InterestCategory;
-feedItemInterestCategories#6be7187b = FeedItem;
-feedItemMessage#7e73b3a5 message:Message = FeedItem;
-feedItemMessageGroup#652f4c71 messages:Vector<Message> = FeedItem;
 feedPosition#5059dc73 date:int peer:Peer id:int = FeedPosition;
 fileHash#f39b035c offset:long limit:int hash:bytes = FileHash;
 folder#ff544e65 flags:# id:int title:string photo:flags.3?ChatPhoto = Folder;
@@ -1496,7 +1486,6 @@ topPeerCategoryForwardUsers#a8406ca9 = TopPeerCategory;
 topPeerCategoryGroups#bd17a14a = TopPeerCategory;
 topPeerCategoryPeers#fb834291 category:TopPeerCategory count:int peers:Vector<TopPeer> = TopPeerCategoryPeers;
 topPeerCategoryPhoneCalls#1e76a78c = TopPeerCategory;
-updateAgentSettings#9434e98d settings:still_unread_count.0?agent.Settings = Update;
 updateAiComposeTones#8c0f91fb = Update;
 updateAttachMenuBots#17b7a20b = Update;
 updateAutoSaveSettings#ec05b097 = Update;
