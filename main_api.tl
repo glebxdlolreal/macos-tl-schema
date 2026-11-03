@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283434)
+// (TLS1 schema blob, build 283435)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -57,11 +57,6 @@ account.webAuthorizations#ed56c9fc authorizations:Vector<WebAuthorization> users
 account.webBrowserSettings#79eb8cb3 flags:# external_exceptions:Vector<WebDomainException> inapp_exceptions:Vector<WebDomainException> hash:long = account.WebBrowserSettings;
 account.webBrowserSettingsNotModified#c31c8f4e = account.WebBrowserSettings;
 accountDaysTTL#b8d0afdf days:int = AccountDaysTTL;
-agent.agentProvider#47327c87 flags:# id:string title:string vendor:string key_url:string icon_emoji_id:flags.1?long = agent.Provider;
-agent.providerKey#784d7e10 provider:string key_last4:string date_connected:int = agent.ProviderKey;
-agent.providers#872297f2 hash:long providers:Vector<agent.Provider> = agent.Providers;
-agent.providersNotModified#43f756ad = agent.Providers;
-agent.settings#fcc362b5 flags:# keys:Vector<agent.ProviderKey> active_provider:flags.0?string = agent.Settings;
 aiComposeTone#cff63ea9 flags:# id:long access_hash:long slug:string title:string emoji_id:flags.1?long prompt:flags.4?string installs_count:flags.2?int author_id:flags.3?long example_english:flags.5?AiComposeToneExample = AiComposeTone;
 aiComposeToneDefault#9bad6414 tone:string emoji_id:long title:string = AiComposeTone;
 aiComposeToneExample#f1d628ec from:TextWithEntities to:TextWithEntities = AiComposeToneExample;
@@ -384,7 +379,6 @@ exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
 exportedNoPaidMessagesToken#695dd042 flags:# token:string url:string expires:flags.0?int = ExportedNoPaidMessagesToken;
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 factCheck#b89bfccf flags:# country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
-feedPosition#5059dc73 date:int peer:Peer id:int = FeedPosition;
 fileHash#f39b035c offset:long limit:int hash:bytes = FileHash;
 folder#ff544e65 flags:# id:int title:string photo:flags.3?ChatPhoto = Folder;
 folderPeer#e9baa668 peer:Peer folder_id:int = FolderPeer;
@@ -923,11 +917,9 @@ messages.composedRichMessageWithAI#4c4537c8 result:RichMessage = messages.Compos
 messages.dhConfig#2c221edd g:int p:bytes version:int random:bytes = messages.DhConfig;
 messages.dhConfigNotModified#c0e24635 random:bytes = messages.DhConfig;
 messages.dialogFilters#2ad93719 flags:# filters:Vector<DialogFilter> = messages.DialogFilters;
-messages.dialogs#2dfdd993 flags:# topics:flags.0?Vector<ForumTopic> dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.Dialogs;
-messages.dialogsLegacy#15ba6c40 dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.Dialogs;
+messages.dialogs#15ba6c40 dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.Dialogs;
 messages.dialogsNotModified#f0e3e596 count:int = messages.Dialogs;
-messages.dialogsSlice#d1747044 flags:# count:int topics:flags.0?Vector<ForumTopic> dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.Dialogs;
-messages.dialogsSliceLegacy#71e094f3 count:int dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.Dialogs;
+messages.dialogsSlice#71e094f3 count:int dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.Dialogs;
 messages.discussionMessage#a6341782 flags:# messages:Vector<Message> max_id:flags.0?int read_inbox_max_id:flags.1?int read_outbox_max_id:flags.2?int unread_count:int chats:Vector<Chat> users:Vector<User> = messages.DiscussionMessage;
 messages.emojiGameDiceInfo#44e56023 flags:# game_hash:string prev_stake:long current_streak:int params:Vector<int> plays_left:flags.0?int = messages.EmojiGameInfo;
 messages.emojiGameOutcome#da2ad647 seed:bytes stake_ton_amount:long ton_amount:long = messages.EmojiGameOutcome;
@@ -958,8 +950,7 @@ messages.messages#1d73e7ea messages:Vector<Message> topics:Vector<ForumTopic> ch
 messages.messagesNotModified#74535f21 count:int = messages.Messages;
 messages.messagesSlice#5f206716 flags:# count:int next_rate:flags.0?int offset_id_offset:flags.2?int search_flood:flags.3?SearchPostsFlood messages:Vector<Message> topics:Vector<ForumTopic> chats:Vector<Chat> users:Vector<User> = messages.Messages;
 messages.myStickers#faff629d count:int sets:Vector<StickerSetCovered> = messages.MyStickers;
-messages.peerDialogs#a749f3e5 flags:# topics:flags.0?Vector<ForumTopic> dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> state:updates.State = messages.PeerDialogs;
-messages.peerDialogsLegacy#3371c354 dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> state:updates.State = messages.PeerDialogs;
+messages.peerDialogs#3371c354 dialogs:Vector<Dialog> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> state:updates.State = messages.PeerDialogs;
 messages.peerSettings#6880b94d settings:PeerSettings chats:Vector<Chat> users:Vector<User> = messages.PeerSettings;
 messages.preparedInlineMessage#ff57708d query_id:long result:BotInlineResult peer_types:Vector<InlineQueryPeerType> cache_time:int users:Vector<User> = messages.PreparedInlineMessage;
 messages.quickReplies#c68d6695 quick_replies:Vector<QuickReply> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = messages.QuickReplies;
@@ -1620,7 +1611,6 @@ updateReadChannelInbox#922e6e10 flags:# folder_id:flags.0?int channel_id:long ma
 updateReadChannelOutbox#b75f99a9 channel_id:long max_id:int = Update;
 updateReadFeaturedEmojiStickers#fb4c496c = Update;
 updateReadFeaturedStickers#571d2742 = Update;
-updateReadFeed#74585fb1 flags:# filter_id:int max_position:FeedPosition unread_count:flags.0?int unread_muted_count:flags.0?int = Update;
 updateReadHistoryInbox#9e84bc99 flags:# folder_id:flags.0?int peer:Peer top_msg_id:flags.1?int max_id:int still_unread_count:int pts:int pts_count:int = Update;
 updateReadHistoryOutbox#2f2f21bf peer:Peer max_id:int pts:int pts_count:int = Update;
 updateReadMessagesContents#f8227181 flags:# messages:Vector<int> pts:int pts_count:int date:flags.0?int = Update;
@@ -1671,16 +1661,12 @@ updateWebBrowserSettings#c39a2ade flags:# = Update;
 updateWebPage#7f891213 webpage:WebPage pts:int pts_count:int = Update;
 updateWebViewResultSent#1592b79d query_id:long = Update;
 updates#74ae4240 updates:Vector<Update> users:Vector<User> chats:Vector<Chat> date:int seq:int = Updates;
-updates.channelDifference#d29de13d flags:# pts:int timeout:flags.1?int topics:flags.2?Vector<ForumTopic> new_messages:Vector<Message> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
+updates.channelDifference#2064674e flags:# pts:int timeout:flags.1?int new_messages:Vector<Message> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
 updates.channelDifferenceEmpty#3e11affb flags:# pts:int timeout:flags.1?int = updates.ChannelDifference;
-updates.channelDifferenceLegacy#2064674e flags:# pts:int timeout:flags.1?int new_messages:Vector<Message> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
-updates.channelDifferenceTooLong#15b37781 flags:# timeout:flags.1?int topics:flags.2?Vector<ForumTopic> dialog:Dialog messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
-updates.channelDifferenceTooLongLegacy#a4bcc6fe flags:# timeout:flags.1?int dialog:Dialog messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
-updates.difference#b78fca40 flags:# topics:flags.0?Vector<ForumTopic> new_messages:Vector<Message> new_encrypted_messages:Vector<EncryptedMessage> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> state:updates.State = updates.Difference;
+updates.channelDifferenceTooLong#a4bcc6fe flags:# timeout:flags.1?int dialog:Dialog messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = updates.ChannelDifference;
+updates.difference#00f49ca0 new_messages:Vector<Message> new_encrypted_messages:Vector<EncryptedMessage> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> state:updates.State = updates.Difference;
 updates.differenceEmpty#5d75a138 date:int seq:int = updates.Difference;
-updates.differenceLegacy#00f49ca0 new_messages:Vector<Message> new_encrypted_messages:Vector<EncryptedMessage> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> state:updates.State = updates.Difference;
-updates.differenceSlice#07c52f53 flags:# topics:flags.0?Vector<ForumTopic> new_messages:Vector<Message> new_encrypted_messages:Vector<EncryptedMessage> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> intermediate_state:updates.State = updates.Difference;
-updates.differenceSliceLegacy#a8fb1981 new_messages:Vector<Message> new_encrypted_messages:Vector<EncryptedMessage> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> intermediate_state:updates.State = updates.Difference;
+updates.differenceSlice#a8fb1981 new_messages:Vector<Message> new_encrypted_messages:Vector<EncryptedMessage> other_updates:Vector<Update> chats:Vector<Chat> users:Vector<User> intermediate_state:updates.State = updates.Difference;
 updates.differenceTooLong#4afe8f6d pts:int = updates.Difference;
 updates.state#a56c2a3e pts:int qts:int date:int seq:int unread_count:int = updates.State;
 updatesCombined#725b04c3 updates:Vector<Update> users:Vector<User> chats:Vector<Chat> date:int seq_start:int seq:int = Updates;
