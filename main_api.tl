@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283468)
+// (TLS1 schema blob, build 283471)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -829,6 +829,7 @@ messageActionSetChatTheme#b91bbd3a theme:ChatTheme = MessageAction;
 messageActionSetChatWallPaper#5060a3f4 flags:# wallpaper:WallPaper = MessageAction;
 messageActionSetMessagesTTL#3c134d7b flags:# period:int auto_setting_from:flags.0?long = MessageAction;
 messageActionStarGift#ea2c31d3 flags:# gift:StarGift message:flags.1?TextWithEntities convert_stars:flags.4?long upgrade_msg_id:flags.5?int upgrade_stars:flags.8?long from_id:flags.11?Peer peer:flags.12?Peer saved_id:flags.12?long prepaid_upgrade_hash:flags.14?string gift_msg_id:flags.15?int to_id:flags.18?Peer gift_num:flags.19?int = MessageAction;
+messageActionStarGiftOnchainOffer#444a6568 flags:# offer_id:long gift:StarGift amount:long fee_bps:int expires_at:int offer_address:string buyer_refund:flags.4?long fine:flags.5?long = MessageAction;
 messageActionStarGiftPurchaseOffer#774278d4 flags:# gift:StarGift price:StarsAmount expires_at:int = MessageAction;
 messageActionStarGiftPurchaseOfferDeclined#73ada76b flags:# gift:StarGift price:StarsAmount = MessageAction;
 messageActionStarGiftUnique#7e1c1187 flags:# gift:StarGift can_export_at:flags.3?int transfer_stars:flags.4?long from_id:flags.6?Peer peer:flags.7?Peer saved_id:flags.7?long resale_amount:flags.8?StarsAmount can_transfer_at:flags.9?int can_resell_at:flags.10?int drop_original_details_stars:flags.12?long can_craft_at:flags.15?int message:flags.18?TextWithEntities = MessageAction;
@@ -1112,6 +1113,9 @@ payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState 
 payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = payments.StarGiftCollections;
 payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
 payments.starGiftDepositPayload#725bb4eb nft_address:string payload:bytes amount:long = payments.StarGiftDepositPayload;
+payments.starGiftOnchainOfferTx#1fe43ec7 flags:# offer_id:long offer_address:string expires_at:int message:payments.StarGiftOnchainOfferTxMessage rent_budget:flags.0?long execution_allowance:flags.0?long forward_amount:flags.1?long fine:flags.2?long = payments.StarGiftOnchainOfferTx;
+payments.starGiftOnchainOfferTxInitState#08d6e475 code:bytes data:bytes = payments.StarGiftOnchainOfferTxInitState;
+payments.starGiftOnchainOfferTxMessage#889c8615 flags:# destination:string value:long mode:int body:bytes init_state:flags.0?payments.StarGiftOnchainOfferTxInitState = payments.StarGiftOnchainOfferTxMessage;
 payments.starGiftOnchainSalePayload#3d1356f0 flags:# nft_address:string amount:long payload:bytes = payments.StarGiftOnchainSalePayload;
 payments.starGiftUpgradeAttributes#46c6e36f attributes:Vector<StarGiftAttribute> = payments.StarGiftUpgradeAttributes;
 payments.starGiftUpgradePreview#3de1dfed sample_attributes:Vector<StarGiftAttribute> prices:Vector<StarGiftUpgradePrice> next_prices:Vector<StarGiftUpgradePrice> = payments.StarGiftUpgradePreview;
@@ -1739,12 +1743,16 @@ wallet.tonConnectPending#85c0f124 session:TonConnectSession requests:Vector<TonC
 wallet.tonConnectSessions#0e1f6896 sessions:Vector<TonConnectSession> = wallet.TonConnectSessions;
 wallet.transactions#4322d5a5 flags:# balance:long transactions:Vector<WalletTransaction> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = wallet.Transactions;
 wallet.userAddresses#928e7b55 addresses:Vector<WalletUserAddress> users:Vector<User> = wallet.UserAddresses;
+walletOnchainGiftActionBuy#f932b52d = WalletOnchainGiftAction;
+walletOnchainGiftActionDelist#9a082f8e = WalletOnchainGiftAction;
+walletOnchainGiftActionList#2e2442c9 = WalletOnchainGiftAction;
 walletOwnershipProof#60bccb0d timestamp:int signature:bytes = WalletOwnershipProof;
 walletState#95c5346b flags:# address:string public_key:bytes balance:long = WalletState;
 walletStateEmpty#9cb9b2ec flags:# = WalletState;
 walletTransaction#952dc143 flags:# id:string amount:long fee:long date:int peer:WalletTransactionPeer comment:flags.3?string tx_hash:flags.4?string nft:flags.7?wallet.NftItem = WalletTransaction;
 walletTransactionPeerAddress#062cc1bc flags:# address:string domain:flags.0?string = WalletTransactionPeer;
 walletTransactionPeerChannel#54e70c31 flags:# channel_id:long address:string domain:flags.0?string = WalletTransactionPeer;
+walletTransactionPeerOnchainGift#4af4aff8 action:WalletOnchainGiftAction = WalletTransactionPeer;
 walletTransactionPeerOnramp#e595186e flags:# address:string domain:flags.0?string provider_name:string = WalletTransactionPeer;
 walletTransactionPeerTelegramGift#f4729499 flags:# = WalletTransactionPeer;
 walletTransactionPeerUnsupported#728bed5a = WalletTransactionPeer;
@@ -2413,12 +2421,14 @@ messages.uploadEncryptedFile#5057c497 peer:InputEncryptedChat file:InputEncrypte
 messages.uploadImportedMedia#2a862092 peer:InputPeer import_id:long file_name:string media:InputMedia = MessageMedia;
 messages.uploadMedia#14967978 flags:# business_connection_id:flags.0?string peer:InputPeer media:InputMedia = MessageMedia;
 messages.viewSponsoredMessage#269e3643 random_id:bytes = Bool;
+payments.acceptStarGiftOnchainOffer#fbba9ede offer_msg_id:int = payments.StarGiftOnchainOfferTx;
 payments.applyGiftCode#f6e26854 slug:string = Updates;
 payments.assignAppStoreTransaction#80ed747d receipt:bytes purpose:InputStorePaymentPurpose = Updates;
 payments.assignPlayMarketTransaction#dffd50d3 receipt:DataJSON purpose:InputStorePaymentPurpose = Updates;
 payments.botCancelStarsSubscription#6dfa0622 flags:# user_id:InputUser charge_id:string = Bool;
 payments.buyStarGiftOnchain#a6d6045c slug:string expected_amount:long = payments.StarGiftOnchainSalePayload;
 payments.canPurchaseStore#4fdc5ea7 purpose:InputStorePaymentPurpose = Bool;
+payments.cancelStarGiftOnchainOffer#1c12babc offer_msg_id:int = payments.StarGiftOnchainOfferTx;
 payments.cancelStarGiftOnchainSale#a24f493a slug:string = payments.StarGiftOnchainSalePayload;
 payments.changeStarsSubscription#c7770878 flags:# peer:InputPeer subscription_id:string canceled:flags.0?Bool = Bool;
 payments.checkCanSendGift#c0c4edc9 gift_id:long = payments.CheckCanSendGiftResult;
@@ -2429,6 +2439,7 @@ payments.convertStarGift#74bf076b stargift:InputSavedStarGift = Bool;
 payments.craftStarGift#b0f9684f stargift:Vector<InputSavedStarGift> = Updates;
 payments.createOnrampSession#a2197cf6 flags:# provider:string crypto_currency:string address:string payment_method:flags.0?string base_currency:flags.1?string base_amount:flags.2?string memo:flags.3?string theme:flags.4?string success_return_url:flags.5?string fail_return_url:flags.6?string crypto_amount:flags.7?string = OnrampSession;
 payments.createStarGiftCollection#1f4a0e87 peer:InputPeer title:string stargift:Vector<InputSavedStarGift> = StarGiftCollection;
+payments.declineStarGiftOnchainOffer#5a1186a6 offer_msg_id:int = Updates;
 payments.deleteStarGift#3cdaf8aa stargift:InputSavedStarGift = Bool;
 payments.deleteStarGiftCollection#ad5648e8 peer:InputPeer collection_id:int = Bool;
 payments.depositStarGift#c0a2ea9f flags:# peer:InputPeer slug:string = payments.StarGiftDepositPayload;
@@ -2482,6 +2493,7 @@ payments.resolveStarGiftOffer#e9ce781c flags:# offer_msg_id:int = Updates;
 payments.saveStarGift#2a2a697c flags:# stargift:InputSavedStarGift = Bool;
 payments.sendPaymentForm#2d03522f flags:# form_id:long invoice:InputInvoice requested_info_id:flags.0?string shipping_option_id:flags.1?string credentials:InputPaymentCredentials tip_amount:flags.2?long = payments.PaymentResult;
 payments.sendStarGiftOffer#8fb86b41 flags:# peer:InputPeer slug:string price:StarsAmount duration:int random_id:long allow_paid_stars:flags.0?long = Updates;
+payments.sendStarGiftOnchainOffer#b57d903e slug:string amount:long duration:int random_id:long = payments.StarGiftOnchainOfferTx;
 payments.sendStarsForm#7998c914 form_id:long invoice:InputInvoice = payments.PaymentResult;
 payments.toggleChatStarGiftNotifications#60eaefa1 flags:# peer:InputPeer = Bool;
 payments.toggleStarGiftsPinnedToTop#1513e7b0 peer:InputPeer stargift:Vector<InputSavedStarGift> = Bool;
