@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283471)
+// (TLS1 schema blob, build 283474)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -952,7 +952,8 @@ messages.favedStickers#2cb51097 hash:long packs:Vector<StickerPack> stickers:Vec
 messages.favedStickersNotModified#9e8fa6d3 = messages.FavedStickers;
 messages.featuredStickers#be382906 flags:# hash:long count:int sets:Vector<StickerSetCovered> unread:Vector<long> = messages.FeaturedStickers;
 messages.featuredStickersNotModified#c6dc0c66 count:int = messages.FeaturedStickers;
-messages.forumTopics#367617d3 flags:# count:int topics:Vector<ForumTopic> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> pts:int = messages.ForumTopics;
+messages.forumTopics#a9ce6e95 flags:# top_icons:flags.1?Vector<long> count:int topics:Vector<ForumTopic> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> pts:int = messages.ForumTopics;
+messages.forumTopicsLegacy#367617d3 flags:# count:int topics:Vector<ForumTopic> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> pts:int = messages.ForumTopics;
 messages.foundStickerSets#8af09dd2 hash:long sets:Vector<StickerSetCovered> = messages.FoundStickerSets;
 messages.foundStickerSetsNotModified#0d54b65d = messages.FoundStickerSets;
 messages.foundStickers#82c9e290 flags:# next_offset:flags.0?int hash:long stickers:Vector<Document> = messages.FoundStickers;
@@ -1032,7 +1033,7 @@ pageBlockAnchor#ce0d37b0 name:string = PageBlock;
 pageBlockAudio#804361ea audio_id:long caption:PageCaption = PageBlock;
 pageBlockAuthorDate#baafe5e0 author:RichText published_date:int = PageBlock;
 pageBlockBlockquote#66d1670b flags:# text:RichText caption:RichText = PageBlock;
-pageBlockBlockquoteBlocks#0e6e47c4 blocks:Vector<PageBlock> caption:RichText = PageBlock;
+pageBlockBlockquoteBlocks#2613f896 flags:# blocks:Vector<PageBlock> caption:RichText = PageBlock;
 pageBlockButtonRow#6d640318 flags:# buttons:Vector<PageButton> = PageBlock;
 pageBlockChannel#ef1751b5 channel:Chat = PageBlock;
 pageBlockCollage#65a0fa4d items:Vector<PageBlock> caption:PageCaption = PageBlock;
@@ -1043,6 +1044,7 @@ pageBlockDocument#38fa3ba3 document_id:long caption:PageCaption = PageBlock;
 pageBlockEmbed#a8718dc5 flags:# url:flags.1?string html:flags.2?string poster_photo_id:flags.4?long w:flags.5?int h:flags.5?int caption:PageCaption = PageBlock;
 pageBlockEmbedPost#f259a80b url:string webpage_id:long author_photo_id:long author:string date:int blocks:Vector<PageBlock> caption:PageCaption = PageBlock;
 pageBlockFooter#48870999 text:RichText = PageBlock;
+pageBlockGroup#3382fa83 flags:# id:flags.0?string blocks:Vector<PageBlock> = PageBlock;
 pageBlockHeader#bfd064ec text:RichText = PageBlock;
 pageBlockHeading1#baff072f text:RichText = PageBlock;
 pageBlockHeading2#096b2aec text:RichText = PageBlock;
@@ -2247,8 +2249,9 @@ messages.getFactCheck#b9cdc5ee peer:InputPeer msg_id:Vector<int> = Vector<FactCh
 messages.getFavedStickers#04f1aaa9 hash:long = messages.FavedStickers;
 messages.getFeaturedEmojiStickers#0ecf6736 hash:long = messages.FeaturedStickers;
 messages.getFeaturedStickers#64780b14 hash:long = messages.FeaturedStickers;
-messages.getForumTopics#3ba47bff flags:# peer:InputPeer q:flags.0?string offset_date:int offset_id:int offset_topic:int limit:int = messages.ForumTopics;
+messages.getForumTopics#c68c219a flags:# peer:InputPeer q:flags.0?string icon_emoji_id:flags.1?long closed:flags.2?Bool offset_date:int offset_id:int offset_topic:int limit:int = messages.ForumTopics;
 messages.getForumTopicsByID#af0a4a08 peer:InputPeer topics:Vector<int> = messages.ForumTopics;
+messages.getForumTopicsLegacy#3ba47bff flags:# peer:InputPeer q:flags.0?string offset_date:int offset_id:int offset_topic:int limit:int = messages.ForumTopics;
 messages.getFullChat#aeb00b34 chat_id:long = messages.ChatFull;
 messages.getFutureChatCreatorAfterLeave#3b7d0ea6 peer:InputPeer = User;
 messages.getGameHighScores#e822649d peer:InputPeer id:int user_id:InputUser = messages.HighScores;
