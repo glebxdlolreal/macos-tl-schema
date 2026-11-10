@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283476)
+// (TLS1 schema blob, build 283478)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -1115,7 +1115,7 @@ payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState 
 payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = payments.StarGiftCollections;
 payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
 payments.starGiftDepositPayload#725bb4eb nft_address:string payload:bytes amount:long = payments.StarGiftDepositPayload;
-payments.starGiftOnchainOfferTx#1fe43ec7 flags:# offer_id:long offer_address:string expires_at:int message:payments.StarGiftOnchainOfferTxMessage rent_budget:flags.0?long execution_allowance:flags.0?long forward_amount:flags.1?long fine:flags.2?long = payments.StarGiftOnchainOfferTx;
+payments.starGiftOnchainOfferTx#fe5681cf flags:# offer_id:long offer_address:string expires_at:int message:payments.StarGiftOnchainOfferTxMessage gasless_message:flags.3?payments.StarGiftOnchainOfferTxMessage rent_budget:flags.0?long execution_allowance:flags.0?long forward_amount:flags.1?long fine:flags.2?long = payments.StarGiftOnchainOfferTx;
 payments.starGiftOnchainOfferTxInitState#08d6e475 code:bytes data:bytes = payments.StarGiftOnchainOfferTxInitState;
 payments.starGiftOnchainOfferTxMessage#889c8615 flags:# destination:string value:long mode:int body:bytes init_state:flags.0?payments.StarGiftOnchainOfferTxInitState = payments.StarGiftOnchainOfferTxMessage;
 payments.starGiftOnchainSalePayload#3d1356f0 flags:# nft_address:string amount:long payload:bytes = payments.StarGiftOnchainSalePayload;
