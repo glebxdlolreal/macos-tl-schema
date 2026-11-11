@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283482)
+// (TLS1 schema blob, build 283486)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -347,8 +347,8 @@ documentAttributeImageSize#6c37c15c w:int h:int = DocumentAttribute;
 documentAttributeSticker#6319d612 flags:# alt:string stickerset:InputStickerSet mask_coords:flags.0?MaskCoords = DocumentAttribute;
 documentAttributeVideo#43c57c48 flags:# duration:double w:int h:int preload_prefix_size:flags.2?int video_start_ts:flags.4?double video_codec:flags.5?string = DocumentAttribute;
 documentEmpty#36f8c871 id:long = Document;
-draftMessage#60fe3294 flags:# reply_to:flags.4?InputReplyTo message:string entities:flags.3?Vector<MessageEntity> media:flags.5?InputMedia date:int effect:flags.7?long suggested_post:flags.8?SuggestedPost rich_message:flags.9?RichMessage = DraftMessage;
-draftMessageEmpty#1b0c841a flags:# date:flags.0?int = DraftMessage;
+draftMessage#9cb1d4fa flags:# reply_to:flags.4?InputReplyTo message:string entities:flags.3?Vector<MessageEntity> media:flags.5?InputMedia date:int effect:flags.7?long suggested_post:flags.8?SuggestedPost rich_message:flags.9?RichMessage ai_style:flags.10?InputAiComposeStyle = DraftMessage;
+draftMessageEmpty#22c44bc8 flags:# date:flags.0?int ai_style:flags.1?InputAiComposeStyle = DraftMessage;
 emailVerificationApple#96d074fd token:string = EmailVerification;
 emailVerificationCode#922e55a9 code:string = EmailVerification;
 emailVerificationGoogle#db909ec2 token:string = EmailVerification;
@@ -384,6 +384,7 @@ exportedChatlistInvite#0c5181ac flags:# title:string url:string peers:Vector<Pee
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
 exportedNoPaidMessagesToken#695dd042 flags:# token:string url:string expires:flags.0?int = ExportedNoPaidMessagesToken;
+exportedNoPaidMessagesTokenLegacy#cf5105be flags:# token:string url:flags.0?string expires:flags.1?int = ExportedNoPaidMessagesToken;
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 factCheck#b89bfccf flags:# country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
 feed.feedMessages#dcf754b9 flags:# max_position:flags.0?FeedPosition min_position:flags.1?FeedPosition read_max_position:flags.2?FeedPosition messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = feed.FeedMessages;
@@ -467,6 +468,7 @@ inlineQueryPeerTypeChat#d766c50a = InlineQueryPeerType;
 inlineQueryPeerTypeMegagroup#5ec4be43 = InlineQueryPeerType;
 inlineQueryPeerTypePM#833c0fac = InlineQueryPeerType;
 inlineQueryPeerTypeSameBotPM#3081ed9d = InlineQueryPeerType;
+inputAiComposeStyle#a82101f0 flags:# tone:flags.0?InputAiComposeTone to_lang:flags.1?string = InputAiComposeStyle;
 inputAiComposeToneDefault#1fe9a9bf tone:string = InputAiComposeTone;
 inputAiComposeToneID#0773c080 id:long access_hash:long = InputAiComposeTone;
 inputAiComposeToneSingleUse#0e0c35af custom_prompt:string = InputAiComposeTone;
@@ -762,6 +764,7 @@ langPackLanguage#eeca5ce3 flags:# name:string native_name:string lang_code:strin
 langPackString#cad181f6 key:string value:string = LangPackString;
 langPackStringDeleted#2979eeb2 key:string = LangPackString;
 langPackStringPluralized#6c47ac9f flags:# key:string zero_value:flags.0?string one_value:flags.1?string two_value:flags.2?string few_value:flags.3?string many_value:flags.4?string other_value:string = LangPackString;
+legacyStarGiftUnique#85f0a9cd flags:# id:long gift_id:long title:string slug:string num:int owner_id:flags.0?Peer owner_name:flags.1?string owner_address:flags.2?string attributes:Vector<StarGiftAttribute> availability_issued:int availability_total:int gift_address:flags.3?string resell_amount:flags.4?Vector<StarsAmount> released_by:flags.5?Peer value_amount:flags.8?long value_currency:flags.8?string value_usd_amount:flags.8?long theme_peer:flags.10?Peer peer_color:flags.11?PeerColor host_id:flags.12?Peer offer_min_stars:flags.13?int craft_chance_permille:flags.16?int = StarGift;
 maskCoords#aed6dbb2 n:int x:double y:double zoom:double = MaskCoords;
 mediaAreaChannelPost#770416af coordinates:MediaAreaCoordinates channel_id:long msg_id:int = MediaArea;
 mediaAreaCoordinates#cfc9e002 flags:# x:double y:double w:double h:double rotation:double radius:flags.0?double = MediaAreaCoordinates;
@@ -801,6 +804,7 @@ messageActionGiftTon#a8a3c699 flags:# currency:string amount:long crypto_currenc
 messageActionGiveawayLaunch#a80f51e4 flags:# stars:flags.0?long = MessageAction;
 messageActionGiveawayResults#87e2f155 flags:# winners_count:int unclaimed_count:int = MessageAction;
 messageActionGramTransfer#34f87469 flags:# amount:long peer_address:string transaction_id:string comment:flags.0?string onramp_provider_name:flags.2?string = MessageAction;
+messageActionGramTransferLegacy#9329ea33 flags:# amount:long peer_address:string transaction_id:string comment:flags.0?string = MessageAction;
 messageActionGroupCall#7a0d7f42 flags:# call:InputGroupCall duration:flags.0?int = MessageAction;
 messageActionGroupCallScheduled#b3a07661 call:InputGroupCall schedule_date:int = MessageAction;
 messageActionHistoryClear#9fbab604 = MessageAction;
@@ -953,7 +957,6 @@ messages.favedStickersNotModified#9e8fa6d3 = messages.FavedStickers;
 messages.featuredStickers#be382906 flags:# hash:long count:int sets:Vector<StickerSetCovered> unread:Vector<long> = messages.FeaturedStickers;
 messages.featuredStickersNotModified#c6dc0c66 count:int = messages.FeaturedStickers;
 messages.forumTopics#a9ce6e95 flags:# top_icons:flags.1?Vector<long> count:int topics:Vector<ForumTopic> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> pts:int = messages.ForumTopics;
-messages.forumTopicsLegacy#367617d3 flags:# count:int topics:Vector<ForumTopic> messages:Vector<Message> chats:Vector<Chat> users:Vector<User> pts:int = messages.ForumTopics;
 messages.foundStickerSets#8af09dd2 hash:long sets:Vector<StickerSetCovered> = messages.FoundStickerSets;
 messages.foundStickerSetsNotModified#0d54b65d = messages.FoundStickerSets;
 messages.foundStickers#82c9e290 flags:# next_offset:flags.0?int hash:long stickers:Vector<Document> = messages.FoundStickers;
@@ -1748,6 +1751,11 @@ wallet.userAddresses#928e7b55 addresses:Vector<WalletUserAddress> users:Vector<U
 walletOnchainGiftActionBuy#f932b52d = WalletOnchainGiftAction;
 walletOnchainGiftActionDelist#9a082f8e = WalletOnchainGiftAction;
 walletOnchainGiftActionList#2e2442c9 = WalletOnchainGiftAction;
+walletOnchainGiftActionOfferAccept#f4d60e48 flags:# offer_address:string counterparty_address:string price:long service_fee:long = WalletOnchainGiftAction;
+walletOnchainGiftActionOfferCancel#65c8b78d flags:# offer_address:string counterparty_address:flags.0?string price:flags.1?long refund_amount:long fine:flags.2?long = WalletOnchainGiftAction;
+walletOnchainGiftActionOfferCreate#e50fd20e flags:# offer_address:string counterparty_address:flags.0?string price:long amount:long service_fee:long expires_at:flags.1?int = WalletOnchainGiftAction;
+walletOnchainGiftActionOfferDecline#c5a854ec flags:# offer_address:string counterparty_address:flags.0?string price:flags.1?long refund_amount:long = WalletOnchainGiftAction;
+walletOnchainGiftActionOfferExpire#da858ed0 flags:# offer_address:string counterparty_address:flags.0?string price:flags.1?long refund_amount:long = WalletOnchainGiftAction;
 walletOwnershipProof#60bccb0d timestamp:int signature:bytes = WalletOwnershipProof;
 walletState#95c5346b flags:# address:string public_key:bytes balance:long = WalletState;
 walletStateEmpty#9cb9b2ec flags:# = WalletState;
@@ -1925,6 +1933,7 @@ aicompose.getTone#b2e8ba03 tone:InputAiComposeTone = aicompose.Tones;
 aicompose.getToneExample#d1b4ab14 tone:InputAiComposeTone num:int = AiComposeToneExample;
 aicompose.getTones#abd59201 hash:long = aicompose.Tones;
 aicompose.saveTone#1782cbb1 tone:InputAiComposeTone unsave:Bool = Bool;
+aicompose.setChatStyle#5d9939c0 flags:# peer:InputPeer style:flags.0?InputAiComposeStyle = Bool;
 aicompose.updateTone#903bcf59 flags:# tone:InputAiComposeTone display_author:flags.0?Bool emoji_id:flags.1?long title:flags.2?string prompt:flags.3?string = AiComposeTone;
 auth.acceptLoginToken#e894ad4d token:bytes = Authorization;
 auth.bindTempAuthKey#cdd42a05 perm_auth_key_id:long nonce:long expires_at:int encrypted_message:bytes = Bool;
@@ -2251,7 +2260,6 @@ messages.getFeaturedEmojiStickers#0ecf6736 hash:long = messages.FeaturedStickers
 messages.getFeaturedStickers#64780b14 hash:long = messages.FeaturedStickers;
 messages.getForumTopics#c68c219a flags:# peer:InputPeer q:flags.0?string icon_emoji_id:flags.1?long closed:flags.2?Bool offset_date:int offset_id:int offset_topic:int limit:int = messages.ForumTopics;
 messages.getForumTopicsByID#af0a4a08 peer:InputPeer topics:Vector<int> = messages.ForumTopics;
-messages.getForumTopicsLegacy#3ba47bff flags:# peer:InputPeer q:flags.0?string offset_date:int offset_id:int offset_topic:int limit:int = messages.ForumTopics;
 messages.getFullChat#aeb00b34 chat_id:long = messages.ChatFull;
 messages.getFutureChatCreatorAfterLeave#3b7d0ea6 peer:InputPeer = User;
 messages.getGameHighScores#e822649d peer:InputPeer id:int user_id:InputUser = messages.HighScores;
