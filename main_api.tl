@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283488)
+// (TLS1 schema blob, build 283493)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -764,6 +764,7 @@ langPackLanguage#eeca5ce3 flags:# name:string native_name:string lang_code:strin
 langPackString#cad181f6 key:string value:string = LangPackString;
 langPackStringDeleted#2979eeb2 key:string = LangPackString;
 langPackStringPluralized#6c47ac9f flags:# key:string zero_value:flags.0?string one_value:flags.1?string two_value:flags.2?string few_value:flags.3?string many_value:flags.4?string other_value:string = LangPackString;
+layer234StarGiftUnique#5439ef98 flags:# offer_min_amount:flags.18?long id:long gift_id:long title:string slug:string num:int owner_id:flags.0?Peer owner_name:flags.1?string owner_address:flags.2?string attributes:Vector<StarGiftAttribute> availability_issued:int availability_total:int gift_address:flags.3?string resell_amount:flags.4?Vector<StarsAmount> released_by:flags.5?Peer value_amount:flags.8?long value_currency:flags.8?string value_usd_amount:flags.8?long theme_peer:flags.10?Peer peer_color:flags.11?PeerColor host_id:flags.12?Peer offer_min_stars:flags.13?int craft_chance_permille:flags.16?int = StarGift;
 legacyStarGiftUnique#85f0a9cd flags:# id:long gift_id:long title:string slug:string num:int owner_id:flags.0?Peer owner_name:flags.1?string owner_address:flags.2?string attributes:Vector<StarGiftAttribute> availability_issued:int availability_total:int gift_address:flags.3?string resell_amount:flags.4?Vector<StarsAmount> released_by:flags.5?Peer value_amount:flags.8?long value_currency:flags.8?string value_usd_amount:flags.8?long theme_peer:flags.10?Peer peer_color:flags.11?PeerColor host_id:flags.12?Peer offer_min_stars:flags.13?int craft_chance_permille:flags.16?int = StarGift;
 maskCoords#aed6dbb2 n:int x:double y:double zoom:double = MaskCoords;
 mediaAreaChannelPost#770416af coordinates:MediaAreaCoordinates channel_id:long msg_id:int = MediaArea;
@@ -1118,6 +1119,7 @@ payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState 
 payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = payments.StarGiftCollections;
 payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
 payments.starGiftDepositPayload#725bb4eb nft_address:string payload:bytes amount:long = payments.StarGiftDepositPayload;
+payments.starGiftOnchainFixedSalePayload#c08bc82e flags:# sale_address:string messages:Vector<payments.StarGiftOnchainOfferTxMessage> gasless_messages:flags.0?Vector<payments.StarGiftOnchainOfferTxMessage> = payments.StarGiftOnchainSalePayload;
 payments.starGiftOnchainOfferTx#fe5681cf flags:# offer_id:long offer_address:string expires_at:int message:payments.StarGiftOnchainOfferTxMessage gasless_message:flags.3?payments.StarGiftOnchainOfferTxMessage rent_budget:flags.0?long execution_allowance:flags.0?long forward_amount:flags.1?long fine:flags.2?long = payments.StarGiftOnchainOfferTx;
 payments.starGiftOnchainOfferTxInitState#08d6e475 code:bytes data:bytes = payments.StarGiftOnchainOfferTxInitState;
 payments.starGiftOnchainOfferTxMessage#889c8615 flags:# destination:string value:long mode:int body:bytes init_state:flags.0?payments.StarGiftOnchainOfferTxInitState = payments.StarGiftOnchainOfferTxMessage;
@@ -1370,7 +1372,7 @@ starGiftAuctionStateNotModified#fe333952 = StarGiftAuctionState;
 starGiftAuctionUserState#2eeed1c4 flags:# bid_amount:flags.0?long bid_date:flags.0?int min_bid_amount:flags.0?long bid_peer:flags.0?Peer acquired_count:int = StarGiftAuctionUserState;
 starGiftBackground#aff56398 center_color:int edge_color:int text_color:int = StarGiftBackground;
 starGiftCollection#9d6b13b0 flags:# collection_id:int title:string icon:flags.0?Document gifts_count:int hash:long = StarGiftCollection;
-starGiftUnique#5439ef98 flags:# offer_min_amount:flags.18?long id:long gift_id:long title:string slug:string num:int owner_id:flags.0?Peer owner_name:flags.1?string owner_address:flags.2?string attributes:Vector<StarGiftAttribute> availability_issued:int availability_total:int gift_address:flags.3?string resell_amount:flags.4?Vector<StarsAmount> released_by:flags.5?Peer value_amount:flags.8?long value_currency:flags.8?string value_usd_amount:flags.8?long theme_peer:flags.10?Peer peer_color:flags.11?PeerColor host_id:flags.12?Peer offer_min_stars:flags.13?int craft_chance_permille:flags.16?int = StarGift;
+starGiftUnique#87214192 flags:# offer_min_amount:flags.18?long fee_bps:flags.20?int id:long gift_id:long title:string slug:string num:int owner_id:flags.0?Peer owner_name:flags.1?string owner_address:flags.2?string attributes:Vector<StarGiftAttribute> availability_issued:int availability_total:int gift_address:flags.3?string resell_amount:flags.4?Vector<StarsAmount> released_by:flags.5?Peer value_amount:flags.8?long value_currency:flags.8?string value_usd_amount:flags.8?long theme_peer:flags.10?Peer peer_color:flags.11?PeerColor host_id:flags.12?Peer offer_min_stars:flags.13?int craft_chance_permille:flags.16?int = StarGift;
 starGiftUpgradePrice#99ea331d date:int upgrade_stars:long = StarGiftUpgradePrice;
 starRefProgram#dd0c66f2 flags:# bot_id:long commission_permille:int duration_months:flags.0?int end_date:flags.1?int daily_revenue_per_user:flags.2?StarsAmount = StarRefProgram;
 starsAmount#bbb6b4a3 amount:long nanos:int = StarsAmount;
