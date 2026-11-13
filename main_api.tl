@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283496)
+// (TLS1 schema blob, build 283501)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -778,6 +778,7 @@ mediaAreaWeather#49a6549c coordinates:MediaAreaCoordinates emoji:string temperat
 message#7600b9d3 flags:# flags2:# id:int from_id:flags.8?Peer from_boosts_applied:flags.29?int from_rank:flags2.12?string peer_id:Peer saved_peer_id:flags.28?Peer fwd_from:flags.2?MessageFwdHeader via_bot_id:flags.11?long via_business_bot_id:flags2.0?long guestchat_via_from:flags2.19?Peer reply_to:flags.3?MessageReplyHeader date:int message:string media:flags.9?MessageMedia reply_markup:flags.6?ReplyMarkup entities:flags.7?Vector<MessageEntity> views:flags.10?int forwards:flags.10?int replies:flags.23?MessageReplies edit_date:flags.15?int post_author:flags.16?string grouped_id:flags.17?long reactions:flags.20?MessageReactions restriction_reason:flags.22?Vector<RestrictionReason> ttl_period:flags.25?int quick_reply_shortcut_id:flags.30?int effect:flags2.2?long factcheck:flags2.3?FactCheck report_delivery_until_date:flags2.5?int paid_message_stars:flags2.6?long suggested_post:flags2.7?SuggestedPost schedule_repeat_period:flags2.10?int summary_from_language:flags2.11?string rich_message:flags2.13?RichMessage = Message;
 messageActionBoostApply#cc02aa6d boosts:int = MessageAction;
 messageActionBotAllowed#c516d679 flags:# domain:flags.0?string app:flags.2?BotApp = MessageAction;
+messageActionBotInvite#e509b17b inviter_id:long = MessageAction;
 messageActionChangeCommunity#5d20bae8 flags:# community_id:flags.0?long = MessageAction;
 messageActionChangeCreator#e188503b new_creator_id:long = MessageAction;
 messageActionChannelCreate#95d2ac92 title:string = MessageAction;
@@ -1119,7 +1120,7 @@ payments.starGiftAuctionState#6b39f4ec gift:StarGift state:StarGiftAuctionState 
 payments.starGiftCollections#8a2932f3 collections:Vector<StarGiftCollection> = payments.StarGiftCollections;
 payments.starGiftCollectionsNotModified#a0ba4f17 = payments.StarGiftCollections;
 payments.starGiftDepositPayload#725bb4eb nft_address:string payload:bytes amount:long = payments.StarGiftDepositPayload;
-payments.starGiftOnchainFixedSalePayload#c08bc82e flags:# sale_address:string messages:Vector<payments.StarGiftOnchainOfferTxMessage> gasless_messages:flags.0?Vector<payments.StarGiftOnchainOfferTxMessage> = payments.StarGiftOnchainSalePayload;
+payments.starGiftOnchainFixedSalePayload#82f9c2b7 flags:# sale_address:string messages:Vector<payments.StarGiftOnchainOfferTxMessage> gasless_messages:flags.0?Vector<payments.StarGiftOnchainOfferTxMessage> = payments.StarGiftOnchainSalePayload;
 payments.starGiftOnchainOfferTx#fe5681cf flags:# offer_id:long offer_address:string expires_at:int message:payments.StarGiftOnchainOfferTxMessage gasless_message:flags.3?payments.StarGiftOnchainOfferTxMessage rent_budget:flags.0?long execution_allowance:flags.0?long forward_amount:flags.1?long fine:flags.2?long = payments.StarGiftOnchainOfferTx;
 payments.starGiftOnchainOfferTxInitState#08d6e475 code:bytes data:bytes = payments.StarGiftOnchainOfferTxInitState;
 payments.starGiftOnchainOfferTxMessage#889c8615 flags:# destination:string value:long mode:int body:bytes init_state:flags.0?payments.StarGiftOnchainOfferTxInitState = payments.StarGiftOnchainOfferTxMessage;
@@ -1145,7 +1146,8 @@ peerColorCollectible#b9c0639a flags:# collectible_id:long gift_emoji_id:long bac
 peerLocated#ca461b5d peer:Peer expires:int distance:int = PeerLocated;
 peerNotifySettings#99622c0c flags:# show_previews:flags.0?Bool silent:flags.1?Bool mute_until:flags.2?int ios_sound:flags.3?NotificationSound android_sound:flags.4?NotificationSound other_sound:flags.5?NotificationSound stories_muted:flags.6?Bool stories_hide_sender:flags.7?Bool stories_ios_sound:flags.8?NotificationSound stories_android_sound:flags.9?NotificationSound stories_other_sound:flags.10?NotificationSound = PeerNotifySettings;
 peerSelfLocated#f8ec284b expires:int = PeerLocated;
-peerSettings#f47741f7 flags:# geo_distance:flags.6?int request_chat_title:flags.9?string request_chat_date:flags.9?int business_bot_id:flags.13?long business_bot_manage_url:flags.13?string charge_paid_message_stars:flags.14?long registration_month:flags.15?string phone_country:flags.16?string name_change_date:flags.17?int photo_change_date:flags.18?int = PeerSettings;
+peerSettings#2441c84b flags:# geo_distance:flags.6?int request_chat_title:flags.9?string request_chat_date:flags.9?int business_bot_id:flags.13?long business_bot_manage_url:flags.13?string charge_paid_message_stars:flags.14?long registration_month:flags.15?string phone_country:flags.16?string name_change_date:flags.17?int photo_change_date:flags.18?int bot_inviter_id:flags.19?long bot_owner_id:flags.20?long = PeerSettings;
+peerSettingsLegacy#f47741f7 flags:# geo_distance:flags.6?int request_chat_title:flags.9?string request_chat_date:flags.9?int business_bot_id:flags.13?long business_bot_manage_url:flags.13?string charge_paid_message_stars:flags.14?long registration_month:flags.15?string phone_country:flags.16?string name_change_date:flags.17?int photo_change_date:flags.18?int = PeerSettings;
 peerStories#9a35e999 flags:# peer:Peer max_read_id:flags.0?int stories:Vector<StoryItem> = PeerStories;
 peerUser#59511722 user_id:long = Peer;
 pendingSuggestion#e7e82e12 suggestion:string title:TextWithEntities description:TextWithEntities url:string = PendingSuggestion;
@@ -1751,8 +1753,8 @@ wallet.tonConnectSessions#0e1f6896 sessions:Vector<TonConnectSession> = wallet.T
 wallet.transactions#4322d5a5 flags:# balance:long transactions:Vector<WalletTransaction> next_offset:flags.0?string chats:Vector<Chat> users:Vector<User> = wallet.Transactions;
 wallet.userAddresses#928e7b55 addresses:Vector<WalletUserAddress> users:Vector<User> = wallet.UserAddresses;
 walletOnchainGiftActionBuy#f932b52d = WalletOnchainGiftAction;
+walletOnchainGiftActionChangePrice#480a59bd flags:# old_price:flags.0?long new_price:long = WalletOnchainGiftAction;
 walletOnchainGiftActionDelist#9a082f8e = WalletOnchainGiftAction;
-walletOnchainGiftActionList#2e2442c9 = WalletOnchainGiftAction;
 walletOnchainGiftActionOfferAccept#f4d60e48 flags:# offer_address:string counterparty_address:string price:long service_fee:long = WalletOnchainGiftAction;
 walletOnchainGiftActionOfferCancel#65c8b78d flags:# offer_address:string counterparty_address:flags.0?string price:flags.1?long refund_amount:long fine:flags.2?long = WalletOnchainGiftAction;
 walletOnchainGiftActionOfferCreate#e50fd20e flags:# offer_address:string counterparty_address:flags.0?string price:long amount:long service_fee:long expires_at:flags.1?int = WalletOnchainGiftAction;
@@ -2325,6 +2327,7 @@ messages.hidePeerSettingsBar#4facb138 peer:InputPeer = Bool;
 messages.importChatInvite#de91436e hash:string = messages.ChatInviteJoinResult;
 messages.initHistoryImport#34090c3b peer:InputPeer file:InputFile media_count:int = messages.HistoryImport;
 messages.installStickerSet#c78fe460 stickerset:InputStickerSet archived:Bool = messages.StickerSetInstallResult;
+messages.inviteUsersToBot#1db7effb bot:InputUser users:Vector<InputUser> = Bool;
 messages.markDialogUnread#8c5006f8 flags:# parent_peer:flags.1?InputPeer peer:InputDialogPeer = Bool;
 messages.migrateChat#a2875319 chat_id:long = Updates;
 messages.prolongWebView#b0d81a83 flags:# peer:InputPeer bot:InputUser query_id:long reply_to:flags.0?InputReplyTo send_as:flags.13?InputPeer = Bool;
@@ -2439,7 +2442,7 @@ payments.applyGiftCode#f6e26854 slug:string = Updates;
 payments.assignAppStoreTransaction#80ed747d receipt:bytes purpose:InputStorePaymentPurpose = Updates;
 payments.assignPlayMarketTransaction#dffd50d3 receipt:DataJSON purpose:InputStorePaymentPurpose = Updates;
 payments.botCancelStarsSubscription#6dfa0622 flags:# user_id:InputUser charge_id:string = Bool;
-payments.buyStarGiftOnchain#a6d6045c slug:string expected_amount:long = payments.StarGiftOnchainSalePayload;
+payments.buyStarGiftOnchain#f6e8a531 flags:# slug:string expected_amount:long peer:flags.0?InputPeer = payments.StarGiftOnchainSalePayload;
 payments.canPurchaseStore#4fdc5ea7 purpose:InputStorePaymentPurpose = Bool;
 payments.cancelStarGiftOnchainOffer#1c12babc offer_msg_id:int = payments.StarGiftOnchainOfferTx;
 payments.cancelStarGiftOnchainSale#a24f493a slug:string = payments.StarGiftOnchainSalePayload;
