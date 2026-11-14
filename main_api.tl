@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283504)
+// (TLS1 schema blob, build 283506)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -1512,6 +1512,7 @@ topPeerCategoryForwardUsers#a8406ca9 = TopPeerCategory;
 topPeerCategoryGroups#bd17a14a = TopPeerCategory;
 topPeerCategoryPeers#fb834291 category:TopPeerCategory count:int peers:Vector<TopPeer> = TopPeerCategoryPeers;
 topPeerCategoryPhoneCalls#1e76a78c = TopPeerCategory;
+transcriptionModel#00c16f15 document:Document languages:Vector<string> version:int = TranscriptionModel;
 updateAgentSettings#ba97db77 settings:agent.Settings = Update;
 updateAiComposeTones#8c0f91fb = Update;
 updateAttachMenuBots#17b7a20b = Update;
@@ -2315,6 +2316,7 @@ messages.getStickers#d5a5d3a1 emoticon:string hash:long = messages.Stickers;
 messages.getSuggestedDialogFilters#a29cd42c = Vector<DialogFilterSuggested>;
 messages.getTopReactions#bb8125ba limit:int hash:long = messages.Reactions;
 messages.getTranscriptionLangs#ba6cd9aa flags:# peer:flags.0?InputPeer = Vector<string>;
+messages.getTranscriptionModels#081f6321 version:int = Vector<TranscriptionModel>;
 messages.getUnreadMentions#f107e790 flags:# peer:InputPeer top_msg_id:flags.0?int offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
 messages.getUnreadPollVotes#43286cf2 flags:# peer:InputPeer top_msg_id:flags.0?int offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
 messages.getUnreadReactions#bd7f90ac flags:# peer:InputPeer top_msg_id:flags.0?int saved_peer_id:flags.1?InputPeer offset_id:int add_offset:int limit:int max_id:int min_id:int = messages.Messages;
