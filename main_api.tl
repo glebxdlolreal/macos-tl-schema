@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283544)
+// (TLS1 schema blob, build 283545)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -57,13 +57,6 @@ account.webAuthorizations#ed56c9fc authorizations:Vector<WebAuthorization> users
 account.webBrowserSettings#79eb8cb3 flags:# external_exceptions:Vector<WebDomainException> inapp_exceptions:Vector<WebDomainException> hash:long = account.WebBrowserSettings;
 account.webBrowserSettingsNotModified#c31c8f4e = account.WebBrowserSettings;
 accountDaysTTL#b8d0afdf days:int = AccountDaysTTL;
-agent.agentModel#d5d43c2a flags:# id:string name:string description:flags.0?string icon_emoji_id:flags.1?long = agent.Model;
-agent.agentProvider#47327c87 flags:# id:string title:string vendor:string key_url:string icon_emoji_id:flags.1?long = agent.Provider;
-agent.models#32d50b38 flags:# models:Vector<agent.Model> next_offset:flags.0?string = agent.Models;
-agent.providerKey#784d7e10 provider:string key_last4:string date_connected:int = agent.ProviderKey;
-agent.providers#872297f2 hash:long providers:Vector<agent.Provider> = agent.Providers;
-agent.providersNotModified#43f756ad = agent.Providers;
-agent.settings#41ff3dd7 flags:# keys:Vector<agent.ProviderKey> active_provider:flags.0?string model:flags.1?string model_name:flags.2?string effort:flags.3?string = agent.Settings;
 aiComposeTone#cff63ea9 flags:# id:long access_hash:long slug:string title:string emoji_id:flags.1?long prompt:flags.4?string installs_count:flags.2?int author_id:flags.3?long example_english:flags.5?AiComposeToneExample = AiComposeTone;
 aiComposeToneDefault#9bad6414 tone:string emoji_id:long title:string = AiComposeTone;
 aiComposeToneExample#f1d628ec from:TextWithEntities to:TextWithEntities = AiComposeToneExample;
@@ -388,16 +381,6 @@ exportedNoPaidMessagesToken#695dd042 flags:# token:string url:string expires:fla
 exportedNoPaidMessagesTokenLegacy#cf5105be flags:# token:string url:flags.0?string expires:flags.1?int = ExportedNoPaidMessagesToken;
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 factCheck#b89bfccf flags:# country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
-feed.feedMessages#dcf754b9 flags:# max_position:flags.0?FeedPosition min_position:flags.1?FeedPosition read_max_position:flags.2?FeedPosition messages:Vector<Message> chats:Vector<Chat> users:Vector<User> = feed.FeedMessages;
-feed.feedMessagesNotModified#db1a3503 = feed.FeedMessages;
-feed.forYouFeed#bea16ebd flags:# items:Vector<FeedItem> chats:Vector<Chat> users:Vector<User> recommendation_id:flags.0?long = feed.ForYouFeed;
-feed.interestCategories#ecb62fa0 categories:Vector<feed.InterestCategory> selected:Vector<int> = feed.InterestCategories;
-feed.interestCategoriesNotModified#79cf2195 = feed.InterestCategories;
-feed.interestCategory#6c4666e3 flags:# id:int title:string emoji:flags.0?string emoji_document_id:flags.1?long = feed.InterestCategory;
-feedItemInterestCategories#6be7187b = FeedItem;
-feedItemMessage#7e73b3a5 message:Message = FeedItem;
-feedItemMessageGroup#652f4c71 messages:Vector<Message> = FeedItem;
-feedPosition#5059dc73 date:int peer:Peer id:int = FeedPosition;
 fileHash#f39b035c offset:long limit:int hash:bytes = FileHash;
 folder#ff544e65 flags:# id:int title:string photo:flags.3?ChatPhoto = Folder;
 folderPeer#e9baa668 peer:Peer folder_id:int = FolderPeer;
@@ -529,7 +512,6 @@ inputEncryptedFileBigUploaded#2dc173c8 id:long parts:int key_fingerprint:int = I
 inputEncryptedFileEmpty#1837c364 = InputEncryptedFile;
 inputEncryptedFileLocation#f5235d55 id:long access_hash:long = InputFileLocation;
 inputEncryptedFileUploaded#64bd0306 id:long parts:int md5_checksum:string key_fingerprint:int = InputEncryptedFile;
-inputFeedEvent#6f89170e peer:InputPeer msg_id:int action:string surface:string flags:# recommendation_id:flags.0?long recommendation_rank:flags.1?int recommendation_role:flags.2?string kind:flags.3?string duration_ms:flags.4?int event_time:flags.5?int random_id:flags.6?long = InputFeedEvent;
 inputFile#f52ff27f id:long parts:int name:string md5_checksum:string = InputFile;
 inputFileBig#fa4f0bb5 id:long parts:int name:string = InputFile;
 inputFileLocation#dfdaabe1 volume_id:long local_id:int secret:long file_reference:bytes = InputFileLocation;
@@ -1514,7 +1496,6 @@ topPeerCategoryGroups#bd17a14a = TopPeerCategory;
 topPeerCategoryPeers#fb834291 category:TopPeerCategory count:int peers:Vector<TopPeer> = TopPeerCategoryPeers;
 topPeerCategoryPhoneCalls#1e76a78c = TopPeerCategory;
 transcriptionModel#00c16f15 document:Document languages:Vector<string> version:int = TranscriptionModel;
-updateAgentSettings#ba97db77 settings:agent.Settings = Update;
 updateAiComposeTones#8c0f91fb = Update;
 updateAttachMenuBots#17b7a20b = Update;
 updateAutoSaveSettings#ec05b097 = Update;
@@ -1649,7 +1630,6 @@ updateReadChannelInbox#922e6e10 flags:# folder_id:flags.0?int channel_id:long ma
 updateReadChannelOutbox#b75f99a9 channel_id:long max_id:int = Update;
 updateReadFeaturedEmojiStickers#fb4c496c = Update;
 updateReadFeaturedStickers#571d2742 = Update;
-updateReadFeed#74585fb1 flags:# filter_id:int max_position:FeedPosition unread_count:flags.0?int unread_muted_count:flags.0?int = Update;
 updateReadHistoryInbox#9e84bc99 flags:# folder_id:flags.0?int peer:Peer top_msg_id:flags.1?int max_id:int still_unread_count:int pts:int pts_count:int = Update;
 updateReadHistoryOutbox#2f2f21bf peer:Peer max_id:int pts:int pts_count:int = Update;
 updateReadMessagesContents#f8227181 flags:# messages:Vector<int> pts:int pts_count:int date:flags.0?int = Update;
@@ -1928,14 +1908,6 @@ account.uploadTheme#1c3db333 flags:# file:InputFile thumb:flags.0?InputFile file
 account.uploadWallPaper#e39a8f03 flags:# file:InputFile mime_type:string settings:WallPaperSettings = WallPaper;
 account.verifyEmail#032da4cf purpose:EmailVerifyPurpose verification:EmailVerification = account.EmailVerified;
 account.verifyPhone#4dd3a7f6 phone_number:string phone_code_hash:string phone_code:string = Bool;
-agent.connect#ff2471ec provider:string key:string = agent.Settings;
-agent.disconnect#9abcf719 provider:string = agent.Settings;
-agent.getModels#e8d52912 flags:# provider:string query:flags.0?string offset:flags.1?string limit:int = agent.Models;
-agent.getProviders#ce0e7413 hash:long = agent.Providers;
-agent.getSettings#fb0f9757 = agent.Settings;
-agent.setActiveProvider#bcb25188 provider:string = agent.Settings;
-agent.setEffort#78f1d2c7 effort:string = agent.Settings;
-agent.setModel#217e5447 model:string = agent.Settings;
 aicompose.createTone#4aa83913 flags:# emoji_id:long title:string prompt:string = AiComposeTone;
 aicompose.deleteTone#dd39316a tone:InputAiComposeTone = Bool;
 aicompose.getTone#b2e8ba03 tone:InputAiComposeTone = aicompose.Tones;
@@ -2029,7 +2001,6 @@ channels.deleteMessages#84c1fd4e channel:InputChannel id:Vector<int> = messages.
 channels.deleteParticipantHistory#367544db channel:InputChannel participant:InputPeer = messages.AffectedHistory;
 channels.editAdmin#9a98ad68 flags:# channel:InputChannel user_id:InputUser admin_rights:ChatAdminRights rank:flags.0?string = Updates;
 channels.editBanned#96e6cd81 channel:InputChannel participant:InputPeer banned_rights:ChatBannedRights = Updates;
-channels.editChannelNews#d704f985 channel:InputChannel news:Bool = Updates;
 channels.editLocation#58e63f6d channel:InputChannel geo_point:InputGeoPoint address:string = Bool;
 channels.editPhoto#f12e57c9 channel:InputChannel photo:InputChatPhoto = Updates;
 channels.editTitle#566decd0 channel:InputChannel title:string = Updates;
@@ -2048,7 +2019,7 @@ channels.getParticipant#a0ab6cc6 channel:InputChannel participant:InputPeer = ch
 channels.getParticipants#77ced9d0 channel:InputChannel filter:ChannelParticipantsFilter offset:int limit:int hash:long = channels.ChannelParticipants;
 channels.getSendAs#e785a43f flags:# peer:InputPeer = channels.SendAsPeers;
 channels.inviteToChannel#c9e33d54 channel:InputChannel users:Vector<InputUser> = messages.InvitedUsers;
-channels.joinChannel#416cb50c flags:# channel:InputChannel = messages.ChatInviteJoinResult;
+channels.joinChannel#7f6a1e22 channel:InputChannel = messages.ChatInviteJoinResult;
 channels.leaveChannel#f836aa95 channel:InputChannel = Updates;
 channels.readHistory#cc104937 channel:InputChannel max_id:int = Bool;
 channels.readMessageContents#eab5dc38 channel:InputChannel id:Vector<int> = Bool;
@@ -2135,13 +2106,6 @@ ephemeral.getCallbackAnswer#3fa464c8 flags:# peer:InputPeer id:int data:flags.1?
 ephemeral.getWelcomeMessages#db9ac18d peer:InputPeer hash:long = ephemeral.WelcomeMessages;
 ephemeral.reportMessage#8704f2bf peer:InputPeer id:int option:bytes message:string = ReportResult;
 ephemeral.sendMessage#ba8d5f35 flags:# peer:flags.8?InputPeer receiver_id:InputUser query_id:flags.0?long message:string entities:flags.1?Vector<MessageEntity> media:flags.2?InputMedia reply_markup:flags.3?ReplyMarkup rich_message:flags.4?InputRichMessage random_id:long reply_to:flags.5?InputReplyTo = Updates;
-feed.dislikePost#4d70175c peer:InputPeer msg_id:int = Bool;
-feed.getFeed#7e76d7d3 flags:# filter_id:int offset_position:flags.0?FeedPosition add_offset:int limit:int max_position:flags.1?FeedPosition min_position:flags.2?FeedPosition hash:long = feed.FeedMessages;
-feed.getForYou#33b8e5eb flags:# query:flags.0?string limit:int = feed.ForYouFeed;
-feed.getInterestCategories#ba7a1dba hash:long = feed.InterestCategories;
-feed.likePost#1b4b627e peer:InputPeer msg_id:int = Bool;
-feed.readFeed#b436c1ff filter_id:int max_position:FeedPosition = Updates;
-feed.setInterestCategories#9f2958dc category_ids:Vector<int> = Bool;
 folders.editPeerFolders#6847d0ab folder_peers:Vector<InputFolderPeer> = Updates;
 fragment.getCollectibleInfo#be1e85ba collectible:InputCollectible = fragment.CollectibleInfo;
 help.acceptTermsOfService#ee72f79a id:DataJSON = Bool;
@@ -2360,7 +2324,6 @@ messages.reorderQuickReplies#60331907 order:Vector<int> = Bool;
 messages.reorderStickerSets#78337739 flags:# order:Vector<long> = Bool;
 messages.report#fc78af9b peer:InputPeer id:Vector<int> option:bytes message:string = ReportResult;
 messages.reportEncryptedSpam#4b0c8c0f peer:InputEncryptedChat = Bool;
-messages.reportFeedEvents#e4a2d5d0 events:Vector<InputFeedEvent> = Bool;
 messages.reportMessagesDelivery#5a6d7395 flags:# peer:InputPeer id:Vector<int> = Bool;
 messages.reportMusicListen#ddbcd819 id:InputDocument listened_duration:int = Bool;
 messages.reportReaction#3f64c076 peer:InputPeer id:int reaction_peer:InputPeer = Bool;
