@@ -4,7 +4,7 @@
 
 
 // This file is auto-generated from the Telegram for macOS binary
-// (TLS1 schema blob, build 283547)
+// (TLS1 schema blob, build 283567)
 // https://github.com/glebxdlolreal/macos-tl-schema
 
 
@@ -145,7 +145,6 @@ botMenuButton#c7b57ce6 text:string url:string = BotMenuButton;
 botMenuButtonCommands#4258c205 = BotMenuButton;
 botMenuButtonDefault#7533a588 = BotMenuButton;
 botPreviewMedia#23e91ba3 date:int media:MessageMedia = BotPreviewMedia;
-botProfileWidget#7c1a8022 flags:# payload:bytes public_data:flags.2?string public_data_hash:flags.2?long chat_data:flags.3?string = BotProfileWidget;
 botVerification#f72e0ed9 bot_id:long icon:long description:TextWithEntities = BotVerification;
 botVerifierSettings#a12aefff flags:# icon:long company:string custom_description:flags.0?TextWithEntities = BotVerifierSettings;
 bots.accessSettings#dd1fbf93 flags:# add_users:flags.1?Vector<User> = bots.AccessSettings;
@@ -378,7 +377,6 @@ exportedChatlistInvite#0c5181ac flags:# title:string url:string peers:Vector<Pee
 exportedContactToken#41bf109b url:string expires:int = ExportedContactToken;
 exportedMessageLink#5dab1af4 link:string html:string = ExportedMessageLink;
 exportedNoPaidMessagesToken#695dd042 flags:# token:string url:string expires:flags.0?int = ExportedNoPaidMessagesToken;
-exportedNoPaidMessagesTokenLegacy#cf5105be flags:# token:string url:flags.0?string expires:flags.1?int = ExportedNoPaidMessagesToken;
 exportedStoryLink#3fc9053b link:string = ExportedStoryLink;
 factCheck#b89bfccf flags:# country:flags.1?string text:flags.1?TextWithEntities hash:long = FactCheck;
 fileHash#f39b035c offset:long limit:int hash:bytes = FileHash;
@@ -570,7 +568,7 @@ inputMessageCallbackQuery#acfa1a7e id:int query_id:long = InputMessage;
 inputMessageEntityMentionName#208e68c9 offset:int length:int user_id:InputUser = MessageEntity;
 inputMessageID#a676a322 id:int = InputMessage;
 inputMessagePinned#86872538 = InputMessage;
-inputMessageReadMetric#ea8fc40d msg_id:int view_id:long time_in_view_ms:int active_time_in_view_ms:int height_to_viewport_ratio_permille:int seen_range_ratio_permille:int flags:# recommendation_id:flags.0?long recommendation_rank:flags.1?int recommendation_role:flags.2?string surface:flags.3?string event_time:flags.4?int = InputMessageReadMetric;
+inputMessageReadMetric#402b4495 msg_id:int view_id:long time_in_view_ms:int active_time_in_view_ms:int height_to_viewport_ratio_permille:int seen_range_ratio_permille:int = InputMessageReadMetric;
 inputMessageReplyTo#bad88395 id:int = InputMessage;
 inputMessagesFilterChatPhotos#3a20ecb8 = MessagesFilter;
 inputMessagesFilterContacts#e062db83 = MessagesFilter;
@@ -747,8 +745,6 @@ langPackLanguage#eeca5ce3 flags:# name:string native_name:string lang_code:strin
 langPackString#cad181f6 key:string value:string = LangPackString;
 langPackStringDeleted#2979eeb2 key:string = LangPackString;
 langPackStringPluralized#6c47ac9f flags:# key:string zero_value:flags.0?string one_value:flags.1?string two_value:flags.2?string few_value:flags.3?string many_value:flags.4?string other_value:string = LangPackString;
-layer234StarGiftUnique#5439ef98 flags:# offer_min_amount:flags.18?long id:long gift_id:long title:string slug:string num:int owner_id:flags.0?Peer owner_name:flags.1?string owner_address:flags.2?string attributes:Vector<StarGiftAttribute> availability_issued:int availability_total:int gift_address:flags.3?string resell_amount:flags.4?Vector<StarsAmount> released_by:flags.5?Peer value_amount:flags.8?long value_currency:flags.8?string value_usd_amount:flags.8?long theme_peer:flags.10?Peer peer_color:flags.11?PeerColor host_id:flags.12?Peer offer_min_stars:flags.13?int craft_chance_permille:flags.16?int = StarGift;
-legacyStarGiftUnique#85f0a9cd flags:# id:long gift_id:long title:string slug:string num:int owner_id:flags.0?Peer owner_name:flags.1?string owner_address:flags.2?string attributes:Vector<StarGiftAttribute> availability_issued:int availability_total:int gift_address:flags.3?string resell_amount:flags.4?Vector<StarsAmount> released_by:flags.5?Peer value_amount:flags.8?long value_currency:flags.8?string value_usd_amount:flags.8?long theme_peer:flags.10?Peer peer_color:flags.11?PeerColor host_id:flags.12?Peer offer_min_stars:flags.13?int craft_chance_permille:flags.16?int = StarGift;
 maskCoords#aed6dbb2 n:int x:double y:double zoom:double = MaskCoords;
 mediaAreaChannelPost#770416af coordinates:MediaAreaCoordinates channel_id:long msg_id:int = MediaArea;
 mediaAreaCoordinates#cfc9e002 flags:# x:double y:double w:double h:double rotation:double radius:flags.0?double = MediaAreaCoordinates;
@@ -789,7 +785,6 @@ messageActionGiftTon#a8a3c699 flags:# currency:string amount:long crypto_currenc
 messageActionGiveawayLaunch#a80f51e4 flags:# stars:flags.0?long = MessageAction;
 messageActionGiveawayResults#87e2f155 flags:# winners_count:int unclaimed_count:int = MessageAction;
 messageActionGramTransfer#34f87469 flags:# amount:long peer_address:string transaction_id:string comment:flags.0?string onramp_provider_name:flags.2?string = MessageAction;
-messageActionGramTransferLegacy#9329ea33 flags:# amount:long peer_address:string transaction_id:string comment:flags.0?string = MessageAction;
 messageActionGroupCall#7a0d7f42 flags:# call:InputGroupCall duration:flags.0?int = MessageAction;
 messageActionGroupCallScheduled#b3a07661 call:InputGroupCall schedule_date:int = MessageAction;
 messageActionHistoryClear#9fbab604 = MessageAction;
@@ -1032,7 +1027,6 @@ pageBlockDocument#38fa3ba3 document_id:long caption:PageCaption = PageBlock;
 pageBlockEmbed#a8718dc5 flags:# url:flags.1?string html:flags.2?string poster_photo_id:flags.4?long w:flags.5?int h:flags.5?int caption:PageCaption = PageBlock;
 pageBlockEmbedPost#f259a80b url:string webpage_id:long author_photo_id:long author:string date:int blocks:Vector<PageBlock> caption:PageCaption = PageBlock;
 pageBlockFooter#48870999 text:RichText = PageBlock;
-pageBlockGroup#3382fa83 flags:# id:flags.0?string blocks:Vector<PageBlock> = PageBlock;
 pageBlockHeader#bfd064ec text:RichText = PageBlock;
 pageBlockHeading1#baff072f text:RichText = PageBlock;
 pageBlockHeading2#096b2aec text:RichText = PageBlock;
@@ -1130,7 +1124,6 @@ peerLocated#ca461b5d peer:Peer expires:int distance:int = PeerLocated;
 peerNotifySettings#99622c0c flags:# show_previews:flags.0?Bool silent:flags.1?Bool mute_until:flags.2?int ios_sound:flags.3?NotificationSound android_sound:flags.4?NotificationSound other_sound:flags.5?NotificationSound stories_muted:flags.6?Bool stories_hide_sender:flags.7?Bool stories_ios_sound:flags.8?NotificationSound stories_android_sound:flags.9?NotificationSound stories_other_sound:flags.10?NotificationSound = PeerNotifySettings;
 peerSelfLocated#f8ec284b expires:int = PeerLocated;
 peerSettings#2441c84b flags:# geo_distance:flags.6?int request_chat_title:flags.9?string request_chat_date:flags.9?int business_bot_id:flags.13?long business_bot_manage_url:flags.13?string charge_paid_message_stars:flags.14?long registration_month:flags.15?string phone_country:flags.16?string name_change_date:flags.17?int photo_change_date:flags.18?int bot_inviter_id:flags.19?long bot_owner_id:flags.20?long = PeerSettings;
-peerSettingsLegacy#f47741f7 flags:# geo_distance:flags.6?int request_chat_title:flags.9?string request_chat_date:flags.9?int business_bot_id:flags.13?long business_bot_manage_url:flags.13?string charge_paid_message_stars:flags.14?long registration_month:flags.15?string phone_country:flags.16?string name_change_date:flags.17?int photo_change_date:flags.18?int = PeerSettings;
 peerStories#9a35e999 flags:# peer:Peer max_read_id:flags.0?int stories:Vector<StoryItem> = PeerStories;
 peerUser#59511722 user_id:long = Peer;
 pendingSuggestion#e7e82e12 suggestion:string title:TextWithEntities description:TextWithEntities url:string = PendingSuggestion;
@@ -1514,9 +1507,6 @@ updateBotMessageReaction#ac21d3ce peer:Peer msg_id:int date:int actor:Peer old_r
 updateBotMessageReactions#09cb7759 peer:Peer msg_id:int date:int reactions:Vector<ReactionCount> qts:int = Update;
 updateBotNewBusinessMessage#9ddb347c flags:# connection_id:string message:Message reply_to_message:flags.0?Message qts:int = Update;
 updateBotPrecheckoutQuery#8caa9a96 flags:# query_id:long user_id:long payload:bytes info:flags.0?PaymentRequestedInfo shipping_option_id:flags.1?string currency:string total_amount:long = Update;
-updateBotProfileWidget#8ecbfbed flags:# bot_id:long widget:flags.0?BotProfileWidget = Update;
-updateBotProfileWidgetData#e8c61aa8 bot_id:long chat_data:string = Update;
-updateBotProfileWidgetQuery#a9e0f526 flags:# query_id:long query_type:WidgetQueryType user_id:long data:bytes wallet_card:flags.0?wallet.Card = Update;
 updateBotPurchasedPaidMedia#283bd312 user_id:long payload:string qts:int = Update;
 updateBotShippingQuery#b5aefd7d query_id:long user_id:long payload:bytes shipping_address:PostAddress = Update;
 updateBotStarsSubscription#6c0d8e23 flags:# user_id:long payload:bytes qts:int = Update;
@@ -1700,7 +1690,7 @@ urlAuthResultDefault#a9d6db1f = UrlAuthResult;
 urlAuthResultRequest#bdca6167 flags:# bot:User domain:string browser:flags.2?string platform:flags.2?string ip:flags.2?string region:flags.2?string match_codes:flags.3?Vector<string> user_id_hint:flags.4?long verified_app_name:flags.7?string tc_session_id:flags.9?long tc_client_id:flags.10?string = UrlAuthResult;
 user#b1b8cc83 flags:# flags2:# id:long access_hash:flags.0?long first_name:flags.1?string last_name:flags.2?string username:flags.3?string phone:flags.4?string photo:flags.5?UserProfilePhoto status:flags.6?UserStatus bot_info_version:flags.14?int restriction_reason:flags.18?Vector<RestrictionReason> bot_inline_placeholder:flags.19?string lang_code:flags.22?string emoji_status:flags.30?EmojiStatus usernames:flags2.0?Vector<Username> stories_max_id:flags2.5?RecentStory color:flags2.8?PeerColor profile_color:flags2.9?PeerColor bot_active_users:flags2.12?int bot_verification_icon:flags2.14?long send_paid_messages_stars:flags2.15?long linked_community_id:flags2.21?long = User;
 userEmpty#d3bc4b7a id:long = User;
-userFull#12c774ad flags:# flags2:# id:long about:flags.1?string settings:PeerSettings personal_photo:flags.21?Photo profile_photo:flags.2?Photo fallback_photo:flags.22?Photo notify_settings:PeerNotifySettings bot_info:flags.3?BotInfo pinned_msg_id:flags.6?int common_chats_count:int folder_id:flags.11?int ttl_period:flags.14?int theme:flags.15?ChatTheme private_forward_name:flags.16?string bot_group_admin_rights:flags.17?ChatAdminRights bot_broadcast_admin_rights:flags.18?ChatAdminRights wallpaper:flags.24?WallPaper stories:flags.25?PeerStories business_work_hours:flags2.0?BusinessWorkHours business_location:flags2.1?BusinessLocation business_greeting_message:flags2.2?BusinessGreetingMessage business_away_message:flags2.3?BusinessAwayMessage business_intro:flags2.4?BusinessIntro birthday:flags2.5?Birthday personal_channel_id:flags2.6?long personal_channel_message:flags2.6?int stargifts_count:flags2.8?int starref_program:flags2.11?StarRefProgram bot_verification:flags2.12?BotVerification send_paid_messages_stars:flags2.14?long disallowed_gifts:flags2.15?DisallowedGiftsSettings stars_rating:flags2.17?StarsRating stars_my_pending_rating:flags2.18?StarsRating stars_my_pending_rating_date:flags2.18?int main_tab:flags2.20?ProfileTab saved_music:flags2.21?Document note:flags2.22?TextWithEntities bot_manager_id:flags2.25?long wallet_card:flags2.19?wallet.Card share_theme:flags2.27?ShareTheme bot_profile_widget:flags2.28?BotProfileWidget = UserFull;
+userFull#b90c2afd flags:# flags2:# id:long about:flags.1?string settings:PeerSettings personal_photo:flags.21?Photo profile_photo:flags.2?Photo fallback_photo:flags.22?Photo notify_settings:PeerNotifySettings bot_info:flags.3?BotInfo pinned_msg_id:flags.6?int common_chats_count:int folder_id:flags.11?int ttl_period:flags.14?int theme:flags.15?ChatTheme private_forward_name:flags.16?string bot_group_admin_rights:flags.17?ChatAdminRights bot_broadcast_admin_rights:flags.18?ChatAdminRights wallpaper:flags.24?WallPaper stories:flags.25?PeerStories business_work_hours:flags2.0?BusinessWorkHours business_location:flags2.1?BusinessLocation business_greeting_message:flags2.2?BusinessGreetingMessage business_away_message:flags2.3?BusinessAwayMessage business_intro:flags2.4?BusinessIntro birthday:flags2.5?Birthday personal_channel_id:flags2.6?long personal_channel_message:flags2.6?int stargifts_count:flags2.8?int starref_program:flags2.11?StarRefProgram bot_verification:flags2.12?BotVerification send_paid_messages_stars:flags2.14?long disallowed_gifts:flags2.15?DisallowedGiftsSettings stars_rating:flags2.17?StarsRating stars_my_pending_rating:flags2.18?StarsRating stars_my_pending_rating_date:flags2.18?int main_tab:flags2.20?ProfileTab saved_music:flags2.21?Document note:flags2.22?TextWithEntities bot_manager_id:flags2.25?long wallet_card:flags2.19?wallet.Card share_theme:flags2.27?ShareTheme = UserFull;
 userProfilePhoto#82d1f706 flags:# photo_id:long stripped_thumb:flags.1?bytes dc_id:int = UserProfilePhoto;
 userProfilePhotoEmpty#4f11bae1 = UserProfilePhoto;
 userStatusEmpty#09d05049 = UserStatus;
@@ -1957,8 +1947,6 @@ bots.createBot#e5b17f2b flags:# name:string username:string manager_id:InputUser
 bots.deletePreviewMedia#2d0135b3 bot:InputUser lang_code:string media:Vector<InputMedia> = Bool;
 bots.editAccessSettings#31813cd8 flags:# bot:InputUser add_users:flags.1?Vector<InputUser> = Bool;
 bots.editPreviewMedia#8525606f bot:InputUser lang_code:string media:InputMedia new_media:InputMedia = BotPreviewMedia;
-bots.editProfileWidgetChatData#fcc22359 user_id:InputUser chat_data:string = Bool;
-bots.editProfileWidgetData#35ff9572 flags:# cache_time:flags.0?int public_data:string = Bool;
 bots.exportBotToken#bd0d99eb bot:InputUser revoke:Bool = bots.ExportedBotToken;
 bots.getAccessSettings#213853a3 bot:InputUser = bots.AccessSettings;
 bots.getAdminedBots#b0711d83 = Vector<User>;
@@ -1969,8 +1957,6 @@ bots.getBotRecommendations#a1b70815 bot:InputUser = users.Users;
 bots.getPopularAppBots#c2510192 offset:string limit:int = bots.PopularAppBots;
 bots.getPreviewInfo#423ab3ad bot:InputUser lang_code:string = bots.PreviewInfo;
 bots.getPreviewMedias#a2a5594d bot:InputUser = Vector<BotPreviewMedia>;
-bots.getProfileWidgetPublicData#72a0d773 bot:InputUser hash:long = messages.WidgetPublicData;
-bots.getProfileWidgetQueryAnswer#85748074 bot:InputUser query_type:WidgetQueryType data:bytes = messages.BotWidgetQueryAnswer;
 bots.getRequestedWebViewButton#bf25b7f3 bot:InputUser webapp_req_id:string = KeyboardButton;
 bots.invokeWebViewCustomMethod#087fc5e7 bot:InputUser custom_method:string params:DataJSON = DataJSON;
 bots.removeUsername#c704147d bot:InputUser username:string = Bool;
